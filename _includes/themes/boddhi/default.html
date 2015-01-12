@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>{{ page.title }}</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Inconsolata|Lato' rel='stylesheet' type='text/css'>
-	<link href='{{ site.baseurl }}{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
-	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{{ ASSET_PATH }}/snippet/jquery.snippet.css" />
+	<link href='/{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
+	<link rel="stylesheet" type="text/css" href="/{{ ASSET_PATH }}/snippet/jquery.snippet.css" />
 </head>
 <body>
 
@@ -17,34 +17,14 @@
 	<header class="the-header">
 		<div class="unit-head">
 			<div class="unit-inner unit-head-inner">
-				<nav class="nav-global">
-					<ul>
-						<div class="logo"><a href="/">{{ site.title }}</a></div>
-						{% for category in site.categories %}
-					  <li style="color: #2980B9">{{ category | first }}</li>
-					    <ul>
-					    {% for posts in category %}
-					      {% for post in posts %}
-					      {% if page.url == post.url %}
-					      	<li class="active"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-					      {% else %}
-					      	<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-					      {% endif %}
-					      {% endfor %}
-					    {% endfor %}
-					    </ul>
-					  </li>
-					{% endfor %}
-
-					</ul>
-				</nav>
+				{% include docs.html %}
 			</div><!-- unit-inner -->
 		</div><!-- unit-head -->
 	</header>
 	<div class="body" role="main">
 		<div class="unit-body">
 			<div class="unit-inner unit-body-inner">
-				<div class="menu"><a href="{{ site.baseurl }}/">Home</a> | <a href="{{ site.baseurl }}/releases/">Releases</a> | <a href="{{ site.baseurl }}/roadmap/">Roadmap</a> | <a href="{{ site.baseurl }}/help/">Help</a></div>
+				<div class="menu"><a href="{{ site.url }}/">Home</a> | <a href="{{ site.url }}/release/">Releases</a> | <a href="{{ site.url }}/roadmap/">Roadmap</a> | <a href="{{ site.url }}/help/">Help</a></div>
 				<div class="entry-content">
 					{{ content }}
 				</div>
@@ -53,8 +33,8 @@
 	</div><!-- body -->
 </div><!-- page -->
 
-<script src="{{ site.baseurl }}{{ ASSET_PATH }}/js/jquery-2.1.3.min.js"></script>
-<script src="{{ site.baseurl }}{{ ASSET_PATH }}/snippet/jquery.snippet.js"></script>
+<script src="/{{ ASSET_PATH }}/js/jquery-2.1.3.min.js"></script>
+<script src="/{{ ASSET_PATH }}/snippet/jquery.snippet.js"></script>
 
 <script>
 

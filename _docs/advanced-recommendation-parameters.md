@@ -1,23 +1,23 @@
 ---
+layout: default
 title: Advanced Recommendation Parameters
-layout: docs
 prev_section: get-behavioural-recommendations
 next_section: stop-recommending-content
 category: HowTo's
-permalink: recommendations-api/advanced-recommendation-parameters
+permalink: docs/advanced-recommendation-parameters/
 ---
-The recommendation engine has a lot of internal parameters for fine tuning the underlying algorithm. For example, when determining the relevance of any given article, its popularity and freshness can alter its score (popular and recent articles score higher). The weight of popularity and freshness when computing the article score can be controlled by setting the respective parameters (`beh.weight.popularity` and `beh.weight.freshness` respectively) to better suit particular needs.
+The recommendation engine has a lot of internal parameters for fine-tuning the underlying algorithm. For example, when determining the relevance of any given article, its popularity and freshness can alter its score (popular and recent articles score higher). When computing an article score, the weight of popularity and freshness can be controlled by setting the respective parameters (`beh.weight.popularity` and `beh.weight.freshness`).
 
-There are many more parameters to adjust, see the reference at the end of this document.
+There are many more parameters to adjust. See the reference at the end of this document.
 
 Parameters can be set per individual request or globally, for all requests.
 
 ## Passing parameters for recommendation request
 
-Both `/recommend/contextual` and `/recommend/behavioural` calls can be called with `GET` and `POST` HTTP methods. When `POST`-ing, some advanced parameters could be passed for fine tuning the results. `Content-type` for `POST` requests should be *application/json* and the request body should contain a simple JSON object with parameter name and value pairs. For example:
+Both `/recommend/contextual` and `/recommend/behavioural` calls can be called with `GET` and `POST` HTTP methods. When `POST`-ing, some advanced parameters could be passed for fine-tuning the results. `Content-type` for `POST` requests should be *application/json* and the request body should contain a simple JSON object with parameter name and value pairs. For example:
 
 <pre><code>
-POST /recommend/contextual?contentid=existing_id
+POST /recommend/contextual?contentid=&lt;existing_id&gt;
 Content-type: application/json
 
 {
@@ -28,8 +28,7 @@ Content-type: application/json
 
 ## Setting parameters globally
 
-Getting and setting global parameter values goes through the `/weight` endpoint. `GET` returns a list of parameters and their
-type, description and current value
+Getting and setting global parameter values goes through the `/weight` endpoint. `GET` returns a list of parameters, their type, description, and current value.
 
 <pre><code>
 GET /weights
@@ -39,14 +38,13 @@ GET /weights
   "name": "mlt.minwl",
   "type": "INTEGER",
   "value": 1,
-  "description": "minimum word length below which words will be ignored"
+  "description": "minimum word length, below which words will be ignored"
   },
   // ... more parameters here
   ]
 </code></pre>
 
-`PUT` or `POST` set values. As in with parameters per recommendation call, the `Content-type` of the request should be
-  *application/json* and the request body should contain a simple object with name -> value pairs:
+`PUT` or `POST` set values. As with the parameters per recommendation call, the `Content-type` of the request should be *application/json*, and the request body should contain a simple object with name -> value pairs:
 
 <pre><code>
   POST /weights
@@ -60,7 +58,7 @@ GET /weights
 
 ## Parameter reference
 
-  All recognized parameters, values below are the defaults:
+  All recognized parameters - values below are the defaults:
 
 <pre><code>
 [

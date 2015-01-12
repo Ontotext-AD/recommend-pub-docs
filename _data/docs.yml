@@ -1,0 +1,19 @@
+- title: Getting Started
+  docs:
+  - quick-start
+  - installation
+
+- title: HowTo's
+  docs:
+  - user-actions
+  - uploading-articles
+  - stop-recommending-content
+  - get-behavioural-recommendations
+  - content-based-recommendation
+  - advanced-recommendation-parameters
+  - upgrade-to-a-newer-version
+
+- title: Miscellaneous
+  docs:
+  - troubleshooting
+  - faq

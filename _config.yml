@@ -1,9 +1,12 @@
-
+markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "Rakefile"]
-baseurl: /recommendations-doc
 title : SAS Services
 
 BODDHI :
   version : 0.1
   BASE_PATH : false
-  ASSET_PATH : false
+  ASSET_PATH : assets/themes/boddhi
+
+collections:
+  docs:
+    output: true

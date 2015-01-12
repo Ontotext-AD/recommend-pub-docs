@@ -1,8 +1,8 @@
 ---
-Title: Quick-start
-layout: docs
+title: Quick Start
+layout: default
 prev_section:  
 next_section: installation
 category: Getting Started
-permalink: recommendations-api/quick-start
+permalink: docs/quick-start/
 ---

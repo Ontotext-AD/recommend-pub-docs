@@ -1,0 +1,34 @@
+<nav class="nav-global">
+	<ul>
+
+	<div class="logo"><a href="/">{{ site.title }}</a></div>
+
+	{% for section in site.data.docs %}
+    <li style="color: #2980B9">{{ section.title }}</li>
+
+    {% for item in section.docs %}
+
+	  {% assign item_url = item | prepend:"/docs/" | append:"/" %}
+
+	  {% if item_url == page.url %}
+	    {% assign c = "active" %}
+	  {% else %}
+	    {% assign c = "" %}
+	  {% endif %}
+
+
+	  {% for p in site.docs %}
+	  	{% if p.url == item_url %}
+	      <li class="{{ c }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
+	      {% break %}
+	    {% endif %}
+	    
+	  {% endfor %}
+
+	{% endfor %}
+
+    {% endfor %}
+
+	</ul>
+</nav>
+			
