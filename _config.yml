@@ -1,6 +1,6 @@
 markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "Rakefile"]
-title : SAS Services
+title : Recommendations API
 
 BODDHI :
   version : 0.1
