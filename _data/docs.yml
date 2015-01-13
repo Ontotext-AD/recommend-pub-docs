@@ -5,15 +5,17 @@
 
 - title: HowTo's
   docs:
-  - user-actions
-  - uploading-articles
-  - stop-recommending-content
-  - get-behavioural-recommendations
   - content-based-recommendation
+  - get-behavioural-recommendations
   - advanced-recommendation-parameters
+  - stop-recommending-content
+  - uploading-articles
+  - user-actions
   - upgrade-to-a-newer-version
 
 - title: Miscellaneous
   docs:
   - troubleshooting
   - faq
+
+  
