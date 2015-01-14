@@ -42,7 +42,6 @@ This is done by the following call:
 
 ```
 GET recommend/user/?key=api_key&userid=user_id
-
 ```
 
 The result is as follows:

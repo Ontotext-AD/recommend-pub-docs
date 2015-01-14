@@ -1,6 +1,6 @@
 ---
 title: Roadmap
-layout: page
+layout: default
 ---
 ## Foreword
 
