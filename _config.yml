@@ -1,6 +1,6 @@
 markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "Rakefile"]
-title : Recommendations API
+title : Recommendation Engine API
 
 BODDHI :
   version : 0.1
