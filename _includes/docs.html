@@ -1,14 +1,14 @@
 <nav class="nav-global">
 	<ul>
 
-	<div class="logo"><a class="menu_link" href="/{{ site.baseurl }}">{{ site.title }}</a></div>
+	<div class="logo"><a class="menu_link" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a></div>
 
 	{% for section in site.data.docs %}
     <li style="color: #2980B9">{{ section.title }}</li>
 
     {% for item in section.docs %}
 
-	  {% assign item_url = item | prepend:"/docs/" | append:"/" %}
+	  {% assign item_url = item | prepend:"/docs/" | append:"" %}
 
 	  {% if item_url == page.url %}
 	    {% assign c = "active" %}
