@@ -3,6 +3,8 @@ exclude: [".rvmrc", ".rbenv-version", "Rakefile"]
 title : Recommendation Engine API
 
 baseurl: /recommend-pub-docs
+date: 2015
+author: Ontotext
 ASSET_PATH : assets/boddhi
 
 collections:
