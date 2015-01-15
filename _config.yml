@@ -2,10 +2,7 @@ markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "Rakefile"]
 title : Recommendation Engine API
 
-BODDHI :
-  version : 0.1
-  BASE_PATH : false
-  ASSET_PATH : assets/themes/boddhi
+ASSET_PATH : assets/boddhi
 
 collections:
   docs:
