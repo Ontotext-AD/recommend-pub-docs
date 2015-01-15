@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 title : Recommendation Engine API
 ---
 
@@ -15,7 +15,7 @@ title : Recommendation Engine API
     <name>{{ site.author }}</name>
   </author>
   <rights type="text">Copyright © {{ site.time | date: "%Y" }} {{ site.author }}. All rights reserved.</rights>
-  {% for post in site.posts limit:10 %}
+  {% for post in site.posts limit:20 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
     <author>{{ post.author }}</author>
