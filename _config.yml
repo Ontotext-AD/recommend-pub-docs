@@ -2,6 +2,7 @@ markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "Rakefile"]
 title : Recommendation Engine API
 
+baseurl: /recommend-pub-docs/
 ASSET_PATH : assets/boddhi
 
 collections:
