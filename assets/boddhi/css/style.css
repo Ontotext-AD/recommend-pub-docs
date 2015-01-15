@@ -38,6 +38,7 @@ body {
   line-height: 1.4;
   -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62);
 }
+
 body,
 button,
 input,
@@ -384,7 +385,6 @@ em {
 html {
   color: #2d2d2d;
 }
-/* Slider Caption */
 
 .flex-caption {
 
@@ -399,6 +399,7 @@ html {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.24);
   border-bottom: none !important;
   margin-left: -38px;
+  display: inline-block;
       
 }
 
