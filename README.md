@@ -1,37 +1,30 @@
 recommend-pub-docs
 ==================
 
-Documentation for the Recommendation services
+## About this documentation
 
 This is the technical documentation of the Recommendation Engine API.
 It contains information about how to get the engine up and running, how to ingest content into it, log user actions, tune the recommendation algorithm, scale, and deploy.
 
-The documentation uses Jekyll as a site generator. Therefore, it takes a template directory containing raw text files in various formats, runs it through Markdown (or Textile) and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.
+## How this documentation is organized
 
-## Dynamic content
+The documentation uses Jekyll as a site generator. And the documentation structure follows jekyll's conventions for organizing content. Basically, it consists of static and dynamic content. The static pages are the ones that are not updated regularly such as Home, Roadmap and Help. The dynamic content are pages written in Markdown format, which you can find in the _docs and _posts folders, and which can be changed/updated at any moment. Such pages are the ones from the HowTo's and Release sections.
 
-1. How to's
-2. News/Release notes
+Jekyll also happens to be the engine behind GitHub Pages, which means we use Jekyll to host our documentation website from GitHub’s server directly.
 
-## Static pages
+## How to add content to the documentation
 
-1. Roadmap
-2. Help
-3. Home
-
-# How to
-
-## Add a new page to the documentation
+### Add a new page to the documentation
 
 * Add a page in markdown in _docs
 *  Add a config entry in _data/docs.yml
 
-## Add release notes
+### Add release notes
 
 * Copy release notes markdown from GitHub
 * Add to _posts, while respecting the naming convention
 
-## Test changes
+### Test changes
 
 * You need Jekyll installed
 * Then go to your local clone of the documentation repo and execute {code}jekyll serve{code}
