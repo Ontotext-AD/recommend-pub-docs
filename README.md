@@ -3,7 +3,7 @@ It contains information about how to get the engine up and running, how to inges
 
 ## How this documentation is organized
 
-As the documentation uses Jekyll as a site generator, its structure follows Jekyll's conventions for organizing content. Basically, it consists of static and dynamic content. The static pages are the ones that are not updated regularly such as Home, Roadmap and Help. The dynamic content are pages written in Markdown format, which you can find in the *_docs* and *_posts* folders, and which can be changed/updated at any moment. Such pages are the ones from the HowTo's and Release sections.
+As the documentation uses Jekyll as a site generator, its structure follows Jekyll's conventions for organizing content. Basically, it consists of static and dynamic content. The static pages are the ones that are not updated regularly such as Home, Roadmap, and Help. The dynamic content are pages written in Markdown format, which you can find in the *_docs* and *_posts* folders, and which can be changed/updated at any moment. Such pages are the ones from the HowTo's and Release sections.
 
 Jekyll also happens to be the engine behind GitHub Pages, which means we use Jekyll to host our documentation website from GitHub’s server.
 
