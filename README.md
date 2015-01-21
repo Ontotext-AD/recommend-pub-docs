@@ -31,7 +31,7 @@ Jekyll also happens to be the engine behind GitHub Pages, which means we use Jek
 
 ## Deploy changes
 
-Just push them to the master branch.
+Just push them to the gh-pages branch.
 
 ## Caveats
 
