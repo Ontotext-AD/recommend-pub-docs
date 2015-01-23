@@ -7,7 +7,7 @@ category: Miscellaneous
 permalink: docs/known-issues/
 ---
 
-## GET /content/{id} - doesn't appear to work with article id as uri
+## GET /content/{id} - doesn't appear to work with the article ID as URI
 
-This is a known issue to us, it is related to a spring bug/limitation when a URI is passed as a `@PathVariable`. It's also a bit ugly...
+This is related to a spring bug/limitation when a URI is passed as a `@PathVariable`. It's also a bit ugly...
 Though it seems we might be able to workaround as suggested [here](http://stackoverflow.com/questions/16332092/spring-mvc-pathvariable-with-dot-is-getting-truncated), we'll have a look at it again when we can.
