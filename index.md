@@ -23,4 +23,5 @@ The recommendation engine is a system that takes content and user actions as inp
 
 - We also plan to develop built-in extension and tuning points. This will increase its capabilities to add more user actions, specific to the business case, and to weigh them appropriately.
 
-## Tips and hints
+- Although the recomemndations components integrate well with other Ontotext products, such as the Concept Extraction Service and GraphDB, it is not bound to RDF in any way. It can be integrated with other existing systems,
+ which use whatever database to store their tags. The tags and keyphrases can contain anything which can be represented as string - numbers, hashes, URIs or words - and similarity is calculated on top of that.
