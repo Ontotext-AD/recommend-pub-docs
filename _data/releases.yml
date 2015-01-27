@@ -14,6 +14,7 @@ releases:
     "Miscellaneous":
       - "troubleshooting"
       - "faq"
+      - "known-issues"
   "v1_1_1":
     "Getting Started":
       - "quick-start"
