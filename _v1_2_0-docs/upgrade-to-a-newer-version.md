@@ -4,7 +4,7 @@ layout: default
 prev_section: user-actions
 next_section:
 category: HowTo's
-permalink: docs/upgrade-to-a-newer-version/
+permalink: v1_2_0-docs/upgrade-to-a-newer-version/
 ---
 ## Five Step Guide
 

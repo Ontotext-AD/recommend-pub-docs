@@ -4,7 +4,7 @@ title: Advanced Recommendation Parameters
 prev_section: get-behavioural-recommendations
 next_section: stop-recommending-content
 category: HowTo's
-permalink: docs/advanced-recommendation-parameters/
+permalink: v1_2_0-docs/advanced-recommendation-parameters/
 ---
 The recommendation engine has a lot of internal parameters for fine-tuning the underlying algorithm. For example, when determining the relevance of any given article, its popularity and freshness can alter its score (popular and recent articles score higher). When computing an article score, the weight of popularity and freshness can be controlled by setting the respective parameters (`beh.weight.popularity` and `beh.weight.freshness`).
 

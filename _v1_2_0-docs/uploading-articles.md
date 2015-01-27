@@ -4,7 +4,7 @@ layout: default
 prev_section: stop-recommending-content
 next_section: user-actions
 category: HowTo's
-permalink: docs/uploading-articles/
+permalink: v1_2_0-docs/uploading-articles/
 ---
 
 Once annotated, the articles for the recommendation service can be uploaded to the `/content` endpoint or added directly to Solr. Annotating articles is outside the scope of this document.

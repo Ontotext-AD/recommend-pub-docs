@@ -4,7 +4,7 @@ layout: default
 prev_section:  
 next_section: installation
 category: Getting Started
-permalink: docs/quick-start/
+permalink: v1_2_0-docs/quick-start/
 ---
 
 # 0. What are the minimum system requirements?
@@ -25,15 +25,15 @@ We don't offer evaluation licenses and trials at the moment. If you want to eval
 
 # 2. Install
 
-Check out the <a href="{{ site.baseurl }}/docs/installation">Installation</a> page.
+Check out the <a href="{{ site.baseurl }}/v1_2_0-docs/installation">Installation</a> page.
 
 # 3. Add content with tags
 
-See the <a href="{{ site.baseurl }}/docs/uploading-articles">Uploading Articles<a> page.
+See the <a href="{{ site.baseurl }}/v1_2_0-docs/uploading-articles">Uploading Articles</a> page.
 
 # 4. Get content-based recommendations
 
-Now you have content in the system and can get basic contextual recommendations. For details, see the <a href="{{ site.baseurl }}/docs/content-based-recommendation">Content-based recommendation<a/> page.
+Now you have content in the system and can get basic contextual recommendations. For details, see the <a href="{{ site.baseurl }}/v1_2_0-docs/content-based-recommendation">Content-based recommendation<a/> page.
 
 # 5. Take a break
 

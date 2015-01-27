@@ -4,7 +4,7 @@ layout: default
 prev_section: upgrade-to-a-newer-version
 next_section: troubleshooting
 category: Miscellaneous
-permalink: docs/known-issues/
+permalink: v1_2_0-docs/known-issues/
 ---
 
 ## GET /content/{id} - doesn't appear to work with the article ID as URI

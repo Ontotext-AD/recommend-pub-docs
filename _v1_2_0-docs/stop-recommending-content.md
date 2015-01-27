@@ -4,7 +4,7 @@ layout: default
 prev_section: advanced-recommendation-parameters
 next_section: uploading-articles
 category: HowTo's
-permalink: docs/stop-recommending-content/
+permalink: v1_2_0-docs/stop-recommending-content/
 ---
 In many systems, documents are not valid forever. An article may be deleted or an advertisement may expire.
 

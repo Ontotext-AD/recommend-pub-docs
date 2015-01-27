@@ -6,8 +6,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="-1" />
+	<meta http-equiv="pragma" content="no-cache" />
 	<title>{{ page.title }}</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Inconsolata|Lato|Raleway' rel='stylesheet' type='text/css'>
+	<link href='{{ site.baseurl }}/{{ site.ASSET_PATH }}/css/font-awesome.css' rel='stylesheet' type='text/css'>
 	<link href='{{ site.baseurl }}/{{ site.ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
 	<link href='{{ site.baseurl }}/{{ site.ASSET_PATH }}/css/boddhi.links.css' rel="stylesheet" media="all">
 	<link rel="stylesheet" href="{{ site.baseurl }}/{{ site.ASSET_PATH }}/snippet/jquery.snippet.css" media="all">
@@ -27,13 +32,13 @@
 			<div class="unit-inner unit-body-inner">
 				
 				<nav class="menu cl-effect-14" id="cl-effect-14">
-					<a href="{{ site.url }}{{ site.baseurl }}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}/release/">Releases</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}/roadmap/">Roadmap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}/help/">Help</a>
+					<a href="{{ site.url }}{{ site.baseurl }}/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}/release/">Releases</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}/roadmap/">Roadmap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}/help/">Help</a>
 				</nav>
 				
 				<div class="entry-content">
 					<article class="unit-article layout-page">
 						<div class="unit-inner unit-article-inner">
-							<div class="content">
+							<section class="content link-flip">
 								<header>
 									<div class="unit-head">
 										<div class="unit-inner unit-head-inner">
@@ -48,7 +53,7 @@
 									</div><!-- entry-content -->
 								</div><!-- bd -->
 
-							</div><!-- content -->
+							</section><!-- content -->
 						</div><!-- unit-inner -->
 					</article>
 				</div>
@@ -65,7 +70,29 @@
 /*! A fix for the iOS orientationchange zoom bug.*/
 (function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
 
-$("pre").snippet("javascript", {style:"vim-dark", menu:false, showNum:false, collapse:true, startCollapsed:true});
+$(function() {
+
+	$("pre").snippet("javascript", {style:"vim-dark", menu:false, showNum:false, collapse:true, startCollapsed:true});
+
+	$(".accordionTitle").click(function(){
+	  $(this).next('.accordionContent').toggle();
+	  if ($(this).next('.accordionContent').is(":visible")) {
+	  	localStorage.setItem($(this).next('.accordionContent').attr('id'), 'expanded');
+	  } else {
+	  	localStorage.setItem($(this).next('.accordionContent').attr('id'), 'collapsed');
+	  }
+	});
+
+	$('.accordionContent').each(function(i, obj) {
+	    if (localStorage.getItem($(this).attr('id')) == 'expanded') {
+	    	$(this).show();
+	    } else {
+	    	$(this).hide();
+	    }
+	});
+
+});
+
 
 </script>
 

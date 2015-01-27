@@ -4,7 +4,7 @@ title: Content-based Recommendation
 prev_section: installation
 next_section: get-behavioural-recommendations
 category: HowTo's
-permalink: docs/content-based-recommendation/
+permalink: v1_2_0-docs/content-based-recommendation/
 ---
 
 :information_source: All example request URLs in this section are relative to the application root. For instance, if the web application is deployed at http://10.0.0.10:8080/api and the example says to request `/recommend/contextual`, the full URL would be http://10.0.0.10:8080/api/recommend/contextual.
