@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import url("http://fonts.googleapis.com/css?family=Fjalla+One");
 * {
   -moz-box-sizing:border-box;
@@ -465,7 +467,6 @@ html {
 
   background: rgba(52, 152, 219,0.3) url(../img/texture-left-bar.png);
   color: #34495E;
-  width: 850px;
   transition: background-color 1s;
   border-radius: 3px;
   padding: 10px 12px 10px 25px;
@@ -512,7 +513,6 @@ html {
 
   background: rgba(46, 204, 113,0.3) url(../img/texture-left-bar.png);
   color: #34495E;
-  width: 850px;
   transition: background-color 1s;
   border-radius: 3px;
   padding: 10px 12px 10px 25px;
@@ -557,8 +557,7 @@ html {
 .warning-badge {
 
   background: rgba(241, 196, 15, 0.3) url(../img/texture-left-bar.png);
-  color: #333;
-  width: 850px;
+  color: #34495E;
   transition: background-color 1s;
   border-radius: 3px;
   padding: 10px 12px 10px 25px;
@@ -567,7 +566,17 @@ html {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.24);
   border-bottom: none !important;
   display: inline-block;
+    font-size: 16px;
+  font-family: 'Inconsolata';
       
+}
+
+.warning-badge:before {
+  font-family: 'FontAwesome';
+  content: "\f071";
+  margin-right: 10px;
+  font-size: 25px;
+  color: #34495E;
 }
 
 .warning-badge a:after {
@@ -620,9 +629,34 @@ a:hover {
   text-decoration: none;
 }
 
+.logo2 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 20pt;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  display: block;
+  height: 300px;
+  width: 50%;
+  float: left;
+  background-color: #e7e5e4;
+  margin-bottom: 6.9em;
+}
+.artificial-light {
+  color: #131313;
+  letter-spacing: .15em;
+  text-shadow: 3px -6px 1px #3f3e3e, 2px -4px 1px #3f3e3e, 1px -2px 1px #3f3e3e, 0px 0px 1px #3f3e3e, -1px 2px #767676, -2px 4px #767676, -3px 6px #767676, -4px 8px #767676, -5px 10px #767676, -6px 12px 1px #767676, -7px 14px 1px #767676, -8px 16px 1px #767676, -9px 18px 1px #767676, -10px 20px 1px #767676, -11px 22px 1px #767676, -12px 24px 1px #767676, -13px 26px 1px #767676, -14px 28px 1px #767676, -15px 30px 1px #767676, -16px 32px 1px #767676, -17px 34px 1px #767676, -18px 36px 1px #767676, -19px 38px 1px #767676, -20px 40px 1px #767676;
+}
+.ambient-light {
+  background-color: #D1DADB;
+  width: 50%;
+  color: #131313;
+  letter-spacing: .15em;
+  text-shadow: 3px -6px 1px #3f3e3e, 2px -4px 1px #3f3e3e, 1px -2px 1px #3f3e3e, 0px 0px 1px #3f3e3e, -1px 2px 1px #788f9e, -2px 4px 1px #788f9e, -3px 6px 1px #788f9e, -4px 8px 1px #788f9e, -5px 10px 1px #788f9e, -6px 12px 1px #788f9e, -7px 14px 1px #788f9e, -8px 16px 1px #788f9e, -9px 18px 1px #788f9e, -10px 20px 1px #788f9e, -11px 22px 1px #788f9e, -12px 24px 1px #788f9e, -13px 26px 1px #788f9e, -14px 28px 1px #788f9e, -15px 30px 1px #788f9e, -16px 32px 1px #788f9e, -17px 34px 1px #788f9e, -18px 36px 1px #788f9e, -19px 38px 1px #788f9e, -20px 40px 1px #788f9e;
+}
+
 .logo {
-  margin-bottom: 5em;
-  width: 500px;
+  margin-bottom: 6.9em;
 }
 
 .logo_link {
@@ -630,7 +664,7 @@ a:hover {
   margin-bottom: 2.7em;
   margin-top: 10px;
 
-  font: normal 2em/1.1 'Fjalla One', Arial, sans-serif;
+  font: normal 2.2em/1.1 'Fjalla One', Arial, sans-serif;
   color: #5f5e61;
   text-transform: uppercase;
   border: .125em solid #5f5e61;
@@ -641,13 +675,13 @@ a:hover {
   -webkit-mask-image: url(../img/a.png);
   -webkit-transform: rotate(-3deg);
 
-  -moz-mask-image: url(../img/a.png);
+  -moz-mask-image: url(../img/a.svg);
   -moz-transform: rotate(-3deg);
 
   -o-mask-image: url(../img/a.png);
   -o-transform: rotate(-3deg);
 
-  mask-image: url(../img/a.png);
+  mask-image: url(../img/a.svg);
   transform: rotate(-3deg);
 
 }
