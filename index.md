@@ -11,7 +11,7 @@ This is a technical documentation, written to be used by technical people. Wheth
 
 ## What is the Recommendation engine?
 
-The recommendation engine is a system that takes content and user actions as input and provides recommended content based on contextual similarity and user profiles in JSON format. It also provides RESTful interface to tune the complex recommendation algorithm at runtime, by setting different weights for the user behaviour components, contextual boosts, and recency relevance decay.
+The Recommendation engine is a system that takes content and user actions as input and provides recommended content based on contextual similarity and user profiles in JSON format. It also provides RESTful interface to tune the complex recommendation algorithm at runtime, by setting different weights for the user behaviour components, contextual boosts, and recency relevance decay.
 
 ### Advantages:
 

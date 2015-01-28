@@ -32,9 +32,10 @@ When the relation is established, a similar result is returned:
 </code></pre>
 
 Query parameters:
-* *userid* (required) - the user reading an article;
-* *contentid* (required) - the article that the user is reading;
-* *timestamp* (optional) - the time when the action occurred. If not specified, the action occurs "now".
+
+* `userid` (required) - the user reading an article;
+* `contentid` (required) - the article that the user is reading;
+* `timestamp` (optional) - the time when the action occurred. If not specified, the action occurs "now".
 
 ### Obtaining a list of user reads
 
@@ -77,9 +78,9 @@ The result is as follows:
 }
 </code></pre>
 
-The user with ID "user-1" has read the article with ID "doc-en-1" three times and the article with ID "doc-en-2" once.
+The user with ID *user-1* has read the article with ID *doc-en-1* three times and the article with ID *doc-en-2* once.
 
-The result is *numberOfReads*=4 for the user as well as *popularity*=3 and *popularity*=1 for the two articles. Popularity is global as it does not depend on the given user.
+The result is `numberOfReads`=4 for the user as well as `popularity`=3 and `popularity`=1 for the two articles. Popularity is global as it does not depend on the given user.
 
 ### Obtaining a count of user reads
 
@@ -94,15 +95,16 @@ GET /usagestats/userreads/?key=&lt;api_key&gt;&amp;from=10
 
 The `to` parameter is optional and defaults to present time.
 Both `from` and `to` can take the following values:
-* `amonthago`
-* `aweekago`
-* integers representing number of days
+
+* amonthago;
+* aweekago;
+* integers representing number of days.
 
 A single number is returned as a result. Note that if a user has read the same article twice, it would be considered as two reads.
 
 Let's say you want to build a chart showing your news site activity on a daily basis for the last 10 days.
 
-You could use this method to get reads for each day and plot them in the chart:
+You could use this method to get reads for each day and plot them in а chart:
 
 <pre><code>
 GET /usagestats/userreads/?key=&lt;api_key&gt;&amp;from=30&amp;to=29
@@ -122,7 +124,7 @@ GET /usagestats/mostactiveusers/?key=api_key&from=aweekago&count=5
 
 It has the same `from` and `to` parameters as `usagestats/userreads` and returns the top users with most reads. The `count` parameter shows the size of the list to be returned.
 
-The method has also the following optional parameters:
+The method has the following optional parameters:
 
 * `minActivity`
 * `maxActivity`

@@ -12,26 +12,27 @@ Once annotated, the articles for the recommendation service can be uploaded to t
 ## Article schema
 
 The recommendation article schema consists of fields and each field has a name and value. The  fields used are as follows:
-* *id* (required) - the article ID, could be an arbitrary string;
 
-* *title* (optional) - the article title;
+* `id` (required) - the article ID, could be an arbitrary string;
 
-* *summary* (optional) - a short summary of the article;
+* `title` (optional) - the article title;
 
-* *content* (optional) - the article text content;
+* `summary` (optional) - a short summary of the article;
 
-* *published* (optional) - the article publication date and time. The allowed formats are described [here](http://lucene.apache.org/solr/4_10_1/solr-core/org/apache/solr/schema/DateField.html).
+* `content` (optional) - the article text content;
 
-* *url* (optional) - the source URL of the article, if applicable;
-* *tags* (optional) - a space-separated list of tags for the article. Anything can be a tag but usually these are instance IDs of mentioned entities. For example, an article mentioning twice New York and once London  will have `http://dbpedia.org/resource/New_York_City`
-`http://dbpedia.org/resource/London`
-`http://dbpedia.org/resource/New_York_City`
- in its *tags* field. This field is used only for named entities.
+* `published` (optional) - the article publication date and time. The allowed formats are described [here](http://lucene.apache.org/solr/4_10_1/solr-core/org/apache/solr/schema/DateField.html).
 
-* *keyphrases* (optional) - a space-separated list of keyphrases. The format is the same as *tags* - anything can be a keyphrase but generally these are generated URIs such as `http://data.ontotext.com/publishing/topic/Metal` or `http://data.ontotext.com/publishing/topic/Oil_refiner`. This field is used only for general words and phrases that are key for the article.
+* `url` (optional) - the source URL of the article, if applicable;
+
+* `tags` (optional) - a space-separated list of tags for the article. Anything can be a tag but usually these are instance IDs of mentioned entities. For example, an article mentioning twice New York and once London  will have `http://dbpedia.org/resource/New_York_City`,
+`http://dbpedia.org/resource/London` and `http://dbpedia.org/resource/New_York_City`
+ in its `tags` field. This field is used only for named entities.
+
+* `keyphrases` (optional) - a space-separated list of keyphrases. The format is the same as `tags` - anything can be a keyphrase but generally these are generated URIs such as `http://data.ontotext.com/publishing/topic/Metal` or `http://data.ontotext.com/publishing/topic/Oil_refiner`. This field is used only for general words and phrases that are key for the article.
 
 
-:exclamation: **Note:** The recommendations work mainly with *tags* and *keyphrases* so it is important to have them.
+:exclamation: **Note:** The recommendations work mainly with `tags` and `keyphrases` so it is important to have them.
 
 The article schema is naturally represented by a simple JSON object, for example:
 
@@ -52,7 +53,7 @@ The article schema is naturally represented by a simple JSON object, for example
 
 If the recommendation engine is deployed at http://recommendation/app, then a couple of actions are available through http://recommendation/app/content:
 
-* `POST /content/<id>` uploads the article with the specified ID. In this case, you can skip the _id_ field from the JSON. If both are present, the one from the URL will take precedence. For example:
+* `POST /content/<id>` uploads the article with the specified ID. In this case, you can skip the `id` field from the JSON. If both are present, the one from the URL will take precedence. For example:
 
 <pre><code>
 POST /content/test-document-1

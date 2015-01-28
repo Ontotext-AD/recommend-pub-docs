@@ -8,19 +8,20 @@ In an effort to be transparent with our roadmap, we publish in advance the impor
 
 ## Upcoming changes
 
-## Early 2015
+### Early 2015
 
-### Relevance based on the behaviour of “People Like Me”
+#### Relevance based on the behaviour of “People Like Me”
 
 This is essentially a collaborative filtering based on user profile similarity. Relevance is calculated based on similarity between entities and terms the users read about.
 
-### Relevance based on the behaviour of “People Near Me”
+#### Relevance based on the behaviour of “People Near Me”
 
-This feature identifies clusters of individuals geographically near a user’s area of interest, where “near” is defined as the neighbourhood, hometown, or country selected by the user.
+This feature identifies clusters of individuals geographically near the user’s area of interest, where “near” is defined as the neighbourhood, hometown, or country selected by the user.
 
-### ”Why am I seeing this?”
+#### ”Why am I seeing this?”
 
 This is something we have planned to implement for quite some time now, for two reasons:
+
 - debugging and internal analysis;
 - showing the user why they are recommended a piece of content.
 

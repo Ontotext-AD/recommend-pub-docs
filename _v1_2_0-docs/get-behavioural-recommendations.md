@@ -11,8 +11,8 @@ permalink: v1_2_0-docs/get-behavioural-recommendations/
 Behavioural recommendations are based on the user profile. They combine data on user interests with a set of configuration parameters that define weight for each factor.
 
 Here is a simple example.
-
 We have two categories of articles:
+
 - Articles with IDs *doc-garden-1*, *doc-garden-2*, etc. are related to gardens, garden tools, flowers, etc.
 - Articles with IDs *doc-travel-1*, *doc-travel-2* etc. are related to geographic places. They contain mainly names of places, transportation terms, etc.
 
@@ -127,6 +127,7 @@ Note how the relevance scores change when popularity is not that important for i
 You can also combine a user profile with the content he/she is currently looking at.
 
 Some possible scenarios could be:
+
 - The user is reading a news article and you want to recommend more articles.
 - The user may be reviewing a CV and you want to recommend suitable job descriptions.
 
@@ -170,8 +171,8 @@ Now, as both the user profile and the related content is about gardening, we get
 
 `/recommend/behavioural` has the following query parameters:
 
-- *userid* (required) - the ID of the user to whom to return the recommendations;
-- *contentid* (optional) - the existing article identifier. If passed, the recommendations will be computed with respect to this article and the user history;
-- *count* (optional, default = 10) - the maximum number of articles to return;
-- *sort* (optional, default = rel) - the sorting method: valid arguments are "pop"(popularity), "rel"(relevancy), and "date";
-- *recency* (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are "amonthago", "aweekago", and integers representing the maximum number of days ago. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied.
+- `userid` (required) - the ID of the user to whom to return the recommendations;
+- `contentid` (optional) - the existing article identifier. If passed, the recommendations will be computed with respect to this article and the user history;
+- `count` (optional, default = 10) - the maximum number of articles to return;
+- `sort` (optional, default = rel) - the sorting method: valid arguments are "pop"(popularity), "rel"(relevancy), and "date";
+- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are "amonthago", "aweekago", and integers representing the maximum number of days ago. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied.

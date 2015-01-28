@@ -44,7 +44,7 @@ GET /weights
   ]
 </code></pre>
 
-`PUT` or `POST` set values. As with the parameters per recommendation call, the `Content-type` of the request should be *application/json*, and the request body should contain a simple object with name -> value pairs:
+`PUT` or `POST` set values. As with the parameters per recommendation call, the `Content-type` of the request should be `application/json`, and the request body should contain a simple object with name -> value pairs:
 
 <pre><code>
   POST /weights
