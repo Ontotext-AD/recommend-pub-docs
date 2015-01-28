@@ -1,4 +1,4 @@
-<div class="logo animated bounceInDown"><a class="logo_link hvr-rotate" href="{{ site.url }}{{ site.baseurl }}/">{{ site.title }}</a></div>
+<div class="logo animated bounceIn"><a class="logo_link hvr-grow-rotate" href="{{ site.url }}{{ site.baseurl }}/">{{ site.title }}</a></div>
 {% for releases in site.data.releases.releases %}
 	{% assign version = releases[0] %}
         	<a class="accordionTitle" href="javascript:void(0)">{{ releases[0] | replace: '_', '.' | capitalize }}</a>
