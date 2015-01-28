@@ -7,7 +7,7 @@ category: HowTo's
 permalink: v1_2_0-docs/user-actions/
 ---
 
-:information_source: All example request URLs in this section are relative to the application root. For instance, if the web application is deployed at http://10.0.0.10:8080/api and the example says to request `/user`, the full URL would be http://10.0.0.10:8080/api/user.
+<div class="info-badge">All example request URLs in this section are relative to the application root. For instance, if the web application is deployed at http://10.0.0.10:8080/api and the example says to request <code>/user</code>, the full URL would be http://10.0.0.10:8080/api/user.</div>
 
 ### Storing user actions
 

@@ -6,7 +6,7 @@ next_section: advanced-recommendation-parameters
 category: HowTo's
 permalink: v1_2_0-docs/get-behavioural-recommendations/
 ---
-:exclamation: **Note:** All request URLs in the document are relative to the application root. E.g. If the web application is deployed at http://10.0.0.10:8080/api and this document says to request `/recommend/behavioural`, the full URL would be http://10.0.0.10:8080/api/recommend/behavioural.
+<div class="note-badge">All request URLs in the document are relative to the application root. E.g. If the web application is deployed at http://10.0.0.10:8080/api and this document says to request <code>/recommend/behavioural</code>, the full URL would be http://10.0.0.10:8080/api/recommend/behavioural.</div>
 
 Behavioural recommendations are based on the user profile. They combine data on user interests with a set of configuration parameters that define weight for each factor.
 

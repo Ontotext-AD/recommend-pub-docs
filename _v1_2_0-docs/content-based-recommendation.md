@@ -7,7 +7,7 @@ category: HowTo's
 permalink: v1_2_0-docs/content-based-recommendation/
 ---
 
-:information_source: All example request URLs on this page are relative to the application root. For instance, if the web application is deployed at http://10.0.0.10:8080/api and the example says to request `/recommend/contextual`, the full URL would be http://10.0.0.10:8080/api/recommend/contextual.
+<div class="info-badge">All example request URLs on this page are relative to the application root. For instance, if the web application is deployed at http://10.0.0.10:8080/api and the example says to request <code>/recommend/contextual</code>, the full URL would be http://10.0.0.10:8080/api/recommend/contextual.</div>
 
 To receive content-based recommendations for existing article, do the request:
 

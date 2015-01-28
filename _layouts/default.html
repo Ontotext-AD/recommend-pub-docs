@@ -13,6 +13,8 @@
 	<title>{{ page.title }}</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Inconsolata|Lato|Raleway' rel='stylesheet' type='text/css'>
 	<link href='{{ site.baseurl }}/{{ site.ASSET_PATH }}/css/font-awesome.css' rel='stylesheet' type='text/css'>
+	<link href='{{ site.baseurl }}/{{ site.ASSET_PATH }}/css/animate.css' rel='stylesheet' type='text/css'>
+	<link href='{{ site.baseurl }}/{{ site.ASSET_PATH }}/css/hover.css' rel='stylesheet' type='text/css'>
 	<link href='{{ site.baseurl }}/{{ site.ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
 	<link href='{{ site.baseurl }}/{{ site.ASSET_PATH }}/css/boddhi.links.css' rel="stylesheet" media="all">
 	<link rel="stylesheet" href="{{ site.baseurl }}/{{ site.ASSET_PATH }}/snippet/jquery.snippet.css" media="all">
@@ -72,7 +74,7 @@
 
 $(function() {
 
-	$("pre").snippet("javascript", {style:"vim-dark", menu:false, showNum:false, collapse:true, startCollapsed:true});
+	$("pre").snippet("javascript", {style:"vim-dark", menu:true, showNum:false, collapse:true, startCollapsed:true});
 
 	$(".accordionTitle").click(function(){
 	  $(this).next('.accordionContent').toggle();
@@ -84,7 +86,7 @@ $(function() {
 	});
 
 	$('.accordionContent').each(function(i, obj) {
-	    if (localStorage.getItem($(this).attr('id')) == 'expanded') {
+	    if ((localStorage.getItem($(this).attr('id')) == 'expanded' || $(this).attr('data-latest') == 'true') && ($(this).attr('id') == 'v1_2_0' && localStorage.getItem($(this).attr('id')) != 'collapsed')) {
 	    	$(this).show();
 	    } else {
 	    	$(this).hide();

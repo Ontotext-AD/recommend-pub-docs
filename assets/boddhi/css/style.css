@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Fjalla+One");
 * {
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
@@ -81,9 +82,16 @@ a:active {
 li.active a {
   border-left: 3px solid #2980B9;
 }
+.logo_link {
+  font-size: 1.8em;
+  line-height: 1em;
+  font-family: 'Open Sans';
+  position: absolute !important;
+}
 .menu_link {
   border: none;
-  font-family: 'Inconsolata';
+  font-family: 'Lato';
+  font-size: 0.8em !important;
 }
 .menu_link:hover {
   border-bottom: none !important;
@@ -400,8 +408,9 @@ html {
 }
 .flex-caption {
 
-  background-image: url(../img/texture-left-bar.png);
+  background: rgba(46, 204, 113,0.3) url(../img/texture-left-bar.png);
   color: #333;
+  transition: background-color 1s;
   border-radius: 3px;
   padding: 10px 12px 10px 25px;
   text-transform: uppercase;
@@ -452,6 +461,134 @@ html {
     
   }
 
+.info-badge {
+
+  background: rgba(52, 152, 219,0.3) url(../img/texture-left-bar.png);
+  color: #34495E;
+  width: 850px;
+  transition: background-color 1s;
+  border-radius: 3px;
+  padding: 10px 12px 10px 25px;
+  -moz-box-shadow: 0px 2px 5px #000;
+  -webkit-box-shadow: 0px 2px 5px #000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.24);
+  border-bottom: none !important;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-family: 'Inconsolata';
+
+}
+
+.info-badge:before {
+  font-family: 'FontAwesome';
+  content: "\f05a";
+  margin-right: 10px;
+  font-size: 25px;
+  color: #34495E;
+}
+
+.info-badge a:after {
+  border-bottom: none !important;
+}
+
+.info-badge:after {
+    content: ' ';
+    background-color: rgba(0,0,0,0);
+    transition: background-color .5s;
+}
+
+.info-badge img {
+
+  display: inline-block !important;
+  margin-bottom: 0px !important;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+
+}
+
+
+.note-badge {
+
+  background: rgba(46, 204, 113,0.3) url(../img/texture-left-bar.png);
+  color: #34495E;
+  width: 850px;
+  transition: background-color 1s;
+  border-radius: 3px;
+  padding: 10px 12px 10px 25px;
+  -moz-box-shadow: 0px 2px 5px #000;
+  -webkit-box-shadow: 0px 2px 5px #000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.24);
+  border-bottom: none !important;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-family: 'Inconsolata';
+      
+}
+
+.note-badge:before {
+  font-family: 'FontAwesome';
+  content: "\f0f6";
+  margin-right: 10px;
+  font-size: 25px;
+  color: #34495E;
+}
+
+.note-badge a:after {
+  border-bottom: none !important;
+}
+
+.note-badge:after {
+    content: ' ';
+    background-color: rgba(0,0,0,0);
+    transition: background-color .5s;
+}
+
+.note-badge img {
+
+  display: inline-block !important;
+  margin-bottom: 0px !important;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+
+}
+
+.warning-badge {
+
+  background: rgba(241, 196, 15, 0.3) url(../img/texture-left-bar.png);
+  color: #333;
+  width: 850px;
+  transition: background-color 1s;
+  border-radius: 3px;
+  padding: 10px 12px 10px 25px;
+  -moz-box-shadow: 0px 2px 5px #000;
+  -webkit-box-shadow: 0px 2px 5px #000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.24);
+  border-bottom: none !important;
+  display: inline-block;
+      
+}
+
+.warning-badge a:after {
+  border-bottom: none !important;
+}
+
+.warning-badge:after {
+    content: ' ';
+    background-color: rgba(0,0,0,0);
+    transition: background-color .5s;
+}
+
+.warning-badge img {
+
+  display: inline-block !important;
+  margin-bottom: 0px !important;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+
+}
+
 #page {
   background: url('monochrome.png');
   background-repeat: repeat;
@@ -483,11 +620,38 @@ a:hover {
   text-decoration: none;
 }
 
-.the-header .logo {
-  font-family: 'Lato' !important;
-  margin: 0;
-  line-height: 15px;
+.logo {
+  margin-bottom: 5em;
+  width: 500px;
 }
+
+.logo_link {
+  margin: 0;
+  margin-bottom: 2.7em;
+  margin-top: 10px;
+
+  font: normal 2em/1.1 'Fjalla One', Arial, sans-serif;
+  color: #5f5e61;
+  text-transform: uppercase;
+  border: .125em solid #5f5e61;
+  display: inline-block;
+  border-radius: .2em;
+  padding: .15em .15em 0.075em;
+
+  -webkit-mask-image: url(../img/a.png);
+  -webkit-transform: rotate(-3deg);
+
+  -moz-mask-image: url(../img/a.png);
+  -moz-transform: rotate(-3deg);
+
+  -o-mask-image: url(../img/a.png);
+  -o-transform: rotate(-3deg);
+
+  mask-image: url(../img/a.png);
+  transform: rotate(-3deg);
+
+}
+
 .the-header .logo a:visited {
   color: #2d2d2d;
 }
