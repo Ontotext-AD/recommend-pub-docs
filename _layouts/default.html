@@ -65,6 +65,7 @@
 </div><!-- page -->
 
 <script src="{{ site.baseurl }}/{{ site.ASSET_PATH }}/js/jquery-2.1.3.min.js"></script>
+<script src="{{ site.baseurl }}/{{ site.ASSET_PATH }}/js/boddhi.easing.js"></script>
 <script src="{{ site.baseurl }}/{{ site.ASSET_PATH }}/snippet/jquery.snippet.js"></script>
 
 <script>
@@ -76,17 +77,15 @@ $(function() {
 
 	$("pre").snippet("javascript", {style:"vim-dark", menu:true, showNum:false, collapse:true, startCollapsed:true});
 
-	$(".accordionTitle").click(function(){
-	  $(this).next('.accordionContent').toggle();
-	  if ($(this).next('.accordionContent').is(":visible")) {
-	  	localStorage.setItem($(this).next('.accordionContent').attr('id'), 'expanded');
-	  } else {
-	  	localStorage.setItem($(this).next('.accordionContent').attr('id'), 'collapsed');
-	  }
+	$('.accordionTitle').on('click',function(){
+	    $(this).next('.accordionContent').slideToggle(1000, 'easeOutBounce').promise().done(function() {
+	        var vis = $(this).is(':visible') ? 'expanded' : 'collapsed';
+	        localStorage.setItem($(this).attr('id'), vis);
+	    });
 	});
 
 	$('.accordionContent').each(function(i, obj) {
-	    if ((localStorage.getItem($(this).attr('id')) == 'expanded' || $(this).attr('data-latest') == 'true') && ($(this).attr('id') == 'v1_2_0' && localStorage.getItem($(this).attr('id')) != 'collapsed')) {
+	    if (localStorage.getItem($(this).attr('id')) == 'expanded' || ($(this).attr('data-latest') == 'true' && localStorage.getItem($(this).attr('id')) == 'expanded')) {
 	    	$(this).show();
 	    } else {
 	    	$(this).hide();

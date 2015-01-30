@@ -84,12 +84,7 @@ a:active {
 li.active a {
   border-left: 3px solid #2980B9;
 }
-.logo_link {
-  font-size: 1.8em;
-  line-height: 1em;
-  font-family: 'Open Sans';
-  position: absolute !important;
-}
+
 .menu_link {
   border: none;
   font-family: 'Lato';
@@ -410,7 +405,7 @@ html {
 }
 .flex-caption {
 
-  background: rgba(46, 204, 113,0.3) url(../img/texture-left-bar.png);
+  background: url(../img/texture-left-bar.png);
   color: #333;
   transition: background-color 1s;
   border-radius: 3px;
@@ -655,13 +650,8 @@ a:hover {
   text-shadow: 3px -6px 1px #3f3e3e, 2px -4px 1px #3f3e3e, 1px -2px 1px #3f3e3e, 0px 0px 1px #3f3e3e, -1px 2px 1px #788f9e, -2px 4px 1px #788f9e, -3px 6px 1px #788f9e, -4px 8px 1px #788f9e, -5px 10px 1px #788f9e, -6px 12px 1px #788f9e, -7px 14px 1px #788f9e, -8px 16px 1px #788f9e, -9px 18px 1px #788f9e, -10px 20px 1px #788f9e, -11px 22px 1px #788f9e, -12px 24px 1px #788f9e, -13px 26px 1px #788f9e, -14px 28px 1px #788f9e, -15px 30px 1px #788f9e, -16px 32px 1px #788f9e, -17px 34px 1px #788f9e, -18px 36px 1px #788f9e, -19px 38px 1px #788f9e, -20px 40px 1px #788f9e;
 }
 
-.logo {
-  margin-bottom: 6.9em;
-}
-
 .logo_link {
   margin: 0;
-  margin-bottom: 2.7em;
   margin-top: 10px;
 
   font: normal 2.2em/1.1 'Fjalla One', Arial, sans-serif;
@@ -959,6 +949,10 @@ a:hover {
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   img {
     max-width: 100%;
+  }
+  .menu a {
+    font-size: 11px;
+    padding: 5px !important;
   }
 }
 
