@@ -158,7 +158,7 @@
 					
 					if(defaults.collapse){
 						var styleClass = o.parent().attr('class');
-						var collapseShow = "<div class='snippet-reveal "+styleClass+"'><pre class='sh_sourceCode'><a href='#' class='snippet-toggle'>"+defaults.showMsg+"</a></pre></div>";
+						var collapseShow = "<div class='snippet-reveal "+styleClass+"'><pre class='sh_sourceCode'><span style='float:left'>Code block...</span><a href='#' class='snippet-toggle'>"+defaults.showMsg+"</a></pre></div>";
 						var collapseHide = "<div class='sh_sourceCode snippet-hide'><pre><a href='#' class='snippet-revealed snippet-toggle'>"+defaults.hideMsg+"</a></pre></div>";
 						
 						o.parents('.snippet-container').append(collapseShow);

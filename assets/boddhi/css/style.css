@@ -1460,7 +1460,7 @@ hr {
   font: 1.6em 'Raleway';
 }
 
-section {
+section:not(.sh_url) {
   position: relative;
   z-index: 1; /* needed for setting pseudo-element z-index */
   overflow: hidden;
@@ -1468,7 +1468,7 @@ section {
   backface-visibility: hidden;
 }
 
-section a {
+section a:not(.sh_url) {
   position: relative;
   display: inline-block;
   outline: none;
@@ -1478,8 +1478,8 @@ section a {
   white-space: nowrap;
 }
 
-section a::before,
-section a::after {
+section a:not(.sh_url)::before,
+section a:not(.sh_url)::after {
   pointer-events: none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -1487,7 +1487,7 @@ section a::after {
   font-smoothing: antialiased;
 }
 
-.link-flip a {
+.link-flip a:not(.sh_url) {
   font-weight: 500;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -1498,13 +1498,13 @@ section a::after {
   line-height: 24px;
 }
 
-.link-flip a:hover,
-.link-flip a:focus {
+.link-flip a:not(.sh_url):hover,
+.link-flip a:not(.sh_url):focus {
 
 }
 
-.link-flip a::before,
-.link-flip a::after {
+.link-flip a:not(.sh_url)::before,
+.link-flip a:not(.sh_url)::after {
   position: absolute;
   top: 0;
   left: -4px;
@@ -1516,7 +1516,7 @@ section a::after {
   content: '';
 }
 
-.link-flip a::before {
+.link-flip a:not(.sh_url)::before {
   background-color: #e6e6e6;
   -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
@@ -1528,12 +1528,12 @@ section a::after {
   transform-origin: 50% 100%;
 }
 
-.link-flip a:hover::before,
-.link-flip a:focus::before {
+.link-flip a:not(.sh_url):hover::before,
+.link-flip a:not(.sh_url):focus::before {
   -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
 
-.link-flip a::after {
+.link-flip a:not(.sh_url)::after {
   border-bottom: 2px solid #333;
 }
