@@ -7,3 +7,19 @@ Thumbs.db
 
 .rbenv-version
 .rvmrc
+
+# Ignore some text editors' backup files
+*~
+
+# Idea
+.idea
+*.iml
+
+# Eclipse
+.metadata
+.classpath
+.project
+.settings
+
+# Misc
+.svn
