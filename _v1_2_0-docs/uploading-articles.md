@@ -121,9 +121,9 @@ Content-type: application/json
 
 <div class="note-badge">
   <ul>
-    <li> For the `/content` endpoint, the `PUT` method is equivalent to `POST` and the two can be used interchangeably.</li>
-    <li> The `Content-type` header for `PUT` and `POST` requests should be `application/json`.</li>
-    <li> It is recommended (though not required) to set the `Accept: application/json` header for all requests.</li>
+    <li> For the <code>/content</code> endpoint, the <code>PUT</code> method is equivalent to <code>POST</code> and the two can be used interchangeably.</li>
+    <li> The <code>Content-type</code> header for <code>PUT</code> and <code>POST</code> requests should be <code>application/json</code>.</li>
+    <li> It is recommended (though not required) to set the <code>Accept: application/json</code> header for all requests.</li>
   </ul>
 </div>
 
