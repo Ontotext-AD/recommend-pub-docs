@@ -124,7 +124,7 @@ Content-type: application/json
     <li> For the `/content` endpoint, the `PUT` method is equivalent to `POST` and the two can be used interchangeably.
     <li> The `Content-type` header for `PUT` and `POST` requests should be `application/json`.
     <li> It is recommended (though not required) to set the `Accept: application/json` header for all requests.
-  </li>
+  </ul>
 </div>
 
 ## Uploading directly to Solr (not recommended)
