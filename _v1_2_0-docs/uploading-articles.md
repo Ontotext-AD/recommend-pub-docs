@@ -32,7 +32,7 @@ The recommendation article schema consists of fields and each field has a name a
 * `keyphrases` (optional) - a space-separated list of keyphrases. The format is the same as `tags` - anything can be a keyphrase but generally these are generated URIs such as `http://data.ontotext.com/publishing/topic/Metal` or `http://data.ontotext.com/publishing/topic/Oil_refiner`. This field is used only for general words and phrases that are key for the article.
 
 
-:exclamation: **Note:** The recommendations work mainly with `tags` and `keyphrases` so it is important to have them.
+<div class="note-badge">The recommendations work mainly with `tags` and `keyphrases` so it is important to have them.</div>
 
 The article schema is naturally represented by a simple JSON object, for example:
 
