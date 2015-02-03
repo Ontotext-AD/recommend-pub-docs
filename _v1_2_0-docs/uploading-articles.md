@@ -119,11 +119,13 @@ Content-type: application/json
 
 * `DELETE /content/<id>` deletes the article with the specified ID.
 
-:exclamation: **Notes:**
+<div class="note-badge">
 
 * For the `/content` endpoint, the `PUT` method is equivalent to `POST` and the two can be used interchangeably.
 * The `Content-type` header for `PUT` and `POST` requests should be `application/json`.
 * It is recommended (though not required) to set the `Accept: application/json` header for all requests.
+
+</div>
 
 ## Uploading directly to Solr (not recommended)
 
