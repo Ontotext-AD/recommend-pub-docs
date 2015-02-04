@@ -25,3 +25,17 @@ The Recommendation engine is a system that takes content and user actions as inp
 
 - Although the recomemndations components integrate well with other Ontotext products, such as the Concept Extraction Service and GraphDB, it is not bound to RDF in any way. It can be integrated with other existing systems,
  which use whatever database to store their tags. The tags and keyphrases can contain anything which can be represented as string - numbers, hashes, URIs or words - and similarity is calculated on top of that.
+
+## Helpful hints
+
+<div class="info-badge">
+Info badges are handy pieces of information.
+</div>
+
+<div class="note-badge">
+Notes are comments or references that may save you time and unnecessary effort.
+</div>
+
+<div class="warning-badge">
+Warnings are pieces of advice that turn your attention to things you should be cautious about.
+</div>
