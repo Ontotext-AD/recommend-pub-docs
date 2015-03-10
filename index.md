@@ -11,7 +11,17 @@ This is a technical documentation, written to be used by technical people. Wheth
 
 ## What is the Recommendation engine?
 
-The Recommendation engine is a system that takes content and user actions as input and provides recommended content based on contextual similarity and user profiles in JSON format. It also provides RESTful interface to tune the complex recommendation algorithm at runtime, by setting different weights for the user behaviour components, contextual boosts, and recency relevance decay.
+Simply said, the Recommendation engine is a system that takes content and user actions as input and provides recommended content based on contextual similarity and user profiles in JSON format. It also provides RESTful interface to tune the complex recommendation algorithm at runtime, by setting different weights for the user behaviour components, contextual boosts, and recency relevance decay.
+
+In more words, the recommendation is a combination of three main objectives/components:
+1. Relevance:
+(a)	relevance of the news item with respect to the user (their history)
+(b)	relevance with respect to the user's momentary context (the news article they are currently reading)
+2. Freshness – the recency of the proposed articles
+3. Popularity – how popular the articles are. Popularity may be two-fold: popularity among peer users (thus becoming part of a collaborative filtering scheme) or popularity with respect to other articles (similar to the PageRank scheme, which reflects the popularity of a web site amongst other web sites).
+
+The recommendation comprises the top n results of a merge of several lists of news articles reflecting the above listed criteria. Each of the lists represents a different aspect of the recommendation objective. The ranks in the merged list of news are controlled by weight parameters, which determine the effect of each objective on the query, and hence the final outcome.
+
 
 ### Advantages:
 
