@@ -13,7 +13,7 @@ Jekyll also happens to be the engine behind GitHub Pages, which means we use Jek
 
 * For each release create a folder named *_vx_x_x-docs*, where <code>x_x_x is</code> the version number of the release
 * Add a page(s) in Markdown format to the *_vx_x_x-docs* folder;
-* Add a config entry in *_config.yml* and below the *collections* property add folder name indented with 2 spaces like this: 
+* Add a config entry in *_config.yml* and below the *collections* property add folder name indented with 2 spaces like this:
 <pre><code>
 collections:
   _vx_x_x-docs:
@@ -78,7 +78,7 @@ Warning badge: &lt;div class="warning-badge"&gt;...&lt;/div&gt;
 
 ### Code blocks
 
-When writing in Markdown, you need to wrap a multi-line code block in `<pre><code>...</code></pre>`, in order to preserve white spaces. Single lines/embedded code snippets can be wrapped in single backticks (`). Everything within the backticks appear as-is, with no other special formatting. For more information, see [Markdown Basics](https://help.github.com/articles/markdown-basics/). 
+When writing in Markdown, you need to wrap a multi-line code block in `<pre><code>...</code></pre>`, in order to preserve white spaces. Single lines/embedded code snippets can be wrapped in single backticks (`). Everything within the backticks appear as-is, with no other special formatting. For more information, see [Markdown Basics](https://help.github.com/articles/markdown-basics/).
 
 ### Front matter
 
