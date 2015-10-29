@@ -69,28 +69,22 @@ GET /weights
     "description": "when a user haven't read many articles, the weight of his profile is lowered. This parameter sets the minimum number of articles a user must read before his profile gains full weight"
   },
   {
-    "name": "beh.boost.expr",
-    "type": "STRING",
-    "value": null,
-    "description": "an optional custom expression for boosting the score of articles for behavioural recommendation. If omitted, documents are boosted based on recency, popularity and covisitation - and the relative weight of all three can be tweaked with the appropriate beh.weight.XXX parameter. Solr function query syntax: http://wiki.apache.org/solr/FunctionQuery"
-  },
-  {
     "name": "beh.weight.freshness",
     "type": "DOUBLE",
     "value": 1.0,
-    "description": "relative weight of the freshness/recency of an article (only when beh.boost.expr is missing)"
+    "description": "relative weight of the freshness/recency of an article"
   },
   {
     "name": "beh.weight.popularity",
     "type": "DOUBLE",
     "value": 1.0,
-    "description": "relative weight of an article's popularity (only when beh.boost.expr is missing)"
+    "description": "relative weight of an article's popularity"
   },
   {
     "name": "beh.weight.covisitation",
     "type": "DOUBLE",
     "value": 1.0,
-    "description": "relative weight of article covisitation (only when beh.boost.expr is missing)"
+    "description": "relative weight of article covisitation"
   },
   {
     "name": "beh.weight.moreLikeThis",
