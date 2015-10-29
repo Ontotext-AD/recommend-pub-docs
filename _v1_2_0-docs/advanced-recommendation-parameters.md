@@ -72,7 +72,7 @@ GET /weights
     "name": "beh.boost.expr",
     "type": "STRING",
     "value": null,
-    "description": "an optional custom expression for boosting the score of articles for behavioural recommendation. If omitted, documents are boosted based on recency, popularity and covisitation - and the relative weight of all three can be tweaked with the appropriate beh.weight.XXX parameter. Solr function query syntax: http://wiki.apache.org/solr/FunctionQuery"
+    "description": "an optional custom expression for boosting the score of articles for behavioural recommendation. If omitted, documents are boosted based on recency, popularity and covisitation - and the relative weight of all three can be tweaked with the appropriate beh.weight.XXX parameter. Lucene query syntax: https://lucene.apache.org/core/4_10_4/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description"
   },
   {
     "name": "beh.weight.freshness",
