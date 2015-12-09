@@ -1,4 +1,13 @@
 releases:
+  "v2_2_0":
+    "HowTo's":
+      - "content-based-recommendations"
+      - "behavioural-recommendations"
+      - "advanced-recommendation-parameters"
+      - "popular-content-recommendations"
+      - "uploading-articles"
+      - "stop-recommending-content"
+      - "user-actions"
   "v1_2_0":
     "Getting Started":
       - "quick-start"
