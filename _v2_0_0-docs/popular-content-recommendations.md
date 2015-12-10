@@ -48,6 +48,8 @@ will return the two articles which have the highest number of reads. Below is an
 }
 </code></pre>
 
+The number of reads for each article is kept in the `popularity` field.
+
 ### Parameters
 
 `/recommend/popular` has the following query parameters:

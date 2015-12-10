@@ -53,9 +53,9 @@ and it will return the following (example) response:
 - `explain` (default = false) - If set to true, the response contains additional debug information;
 - `onlyunread` (default = true) - If set to true, the recommendation contains only articles the user has never read. Otherwise read articles are also included in the response. 
 - `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied;
-- `filter` (optional, default = <empty>) - a string containing space delimeted key-value pairs which are interpreted as an "AND" constraint. For example:
-1. title:"Some title" - retrieves articles having a title that matches the requirement
-2. title:"Some title" summary:"Some summary" - retrieves all articles with matching title and summary
+- `filter` (optional, default = <empty>) - a comma delimeted list of key-value pairs. Only articles which satisfy all of the constraints in the list are left for the further recommendation. For example:
+1. title:Some title - the recommendation consists only of articles with titles that contain the desired text.
+2. title:Some title,summary:Some summary - the recommendation contains only articles which have matching titles and summaries
 
 ## Retrieving articles based on content similarity with advanced parameters
 

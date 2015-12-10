@@ -43,7 +43,7 @@ This is done by the following call:
 DELETE /users/<userid>/history
 ```
 
-## Obtaining a list of user's reads
+## Obtaining a list of user's read articles
 
 This is done by the following call:
 
@@ -86,7 +86,7 @@ An example result is shown below  (`GET /users/user_1/history`):
 }
 </code></pre>
 
-Four of the seven reads of the returned articles are made from the user with id `user_1`
+Four of the seven reads of the returned articles are from the user with id `user_1`
 
 Query parameters:
 
@@ -105,7 +105,7 @@ This is done by the following call:
 GET /users/<userid>/history/size
 ```
 
-The result is as follows:
+The received result looks as follows:
 
 <pre><code>
 {
