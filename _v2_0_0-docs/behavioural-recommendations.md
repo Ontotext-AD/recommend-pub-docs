@@ -21,9 +21,9 @@ In this example, the articles of the second category are more visited - they hav
 We have a user with ID *test-user-1*. This user has read only two articles: *doc-garden-1* and *doc-garden-3*.
 
 You can get recommended content for this user by calling:
-<code>
+`
 GET /recommend/behavioural?userid=test-user-1&count=4&sort=rel
-</code>
+`
 
 This is the result:
 <pre><code>
@@ -122,7 +122,7 @@ This changes the weight of popularity to 0.2 (down from the default 0.9) and the
 }
 </code></pre>
 
-Note how the relevance scores change when popularity is not that important for it.
+Note how the relevance score changes when popularity is not that important to it.
 
 You can also combine a user profile with the content he/she is currently looking at.
 

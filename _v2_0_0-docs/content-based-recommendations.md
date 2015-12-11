@@ -70,7 +70,7 @@ Content-type: application/json
 }
 </code></pre>
 
-This is described in more detail in the [Advanced recommendation parameter](/recommend-pub-docs/v2_0_0-docs/advanced-recommendation-parameters/) section
+Advanced parameters are described in more detail in the [Advanced recommendation parameter](/recommend-pub-docs/v2_0_0-docs/advanced-recommendation-parameters/) section
 
 ## Retrieving articles based on content similarity to a non-indexed article
 

@@ -34,14 +34,14 @@ Getting and setting global parameter values goes through the `/weights` endpoint
 GET /weights
 
 [
-{
-  "name": "mlt.minwl",
-  "type": "INTEGER",
-  "value": 1,
-  "description": "minimum word length, below which words will be ignored"
+  {
+    "name": "mlt.minwl",
+    "type": "INTEGER",
+    "value": 1,
+    "description": "minimum word length, below which words will be ignored"
   },
   // ... more parameters here
-  ]
+]
 </code></pre>
 
 `POST` sets new values for the specified parameters. As with the parameters per recommendation call, the `Content-type` of the request should be `application/json`, and the request body should contain a simple object with name -> value pairs:

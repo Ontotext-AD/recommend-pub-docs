@@ -32,12 +32,12 @@ When the relation is established, a similar result is returned:
 Query parameters:
 
 * `contentid` (required) - the article that the user is reading;
-* `weight` (optional) - a value representing the amount of impact of this read on the user profile. This could be used with a custom recommendation algorithm.
+* `weight` (optional) - a value representing the amount of impact that this read has on the user profile. This value is currently being ignored but it could be used with a custom recommendation algorithm.
 * `timestamp` (optional) - the time when the action occurred. If not specified, the action occurs "now".
 
 ## Deleting the history of a user
 
-This is done by the following call:
+You can delete the whole history of the user with the following call:
 
 ```
 DELETE /users/<userid>/history
@@ -45,7 +45,7 @@ DELETE /users/<userid>/history
 
 ## Obtaining a list of user's read articles
 
-This is done by the following call:
+The following method can be used to retrieve the number of articles a user has read and the list of the read articles:
 
 ```
 GET /users/<userid>/history

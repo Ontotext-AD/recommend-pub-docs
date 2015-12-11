@@ -12,7 +12,7 @@ In such cases it would be appropriate to stop recommending this piece of content
 
 
 * `DELETE /content/existing_doc_id`
-* `DELETE /content?contentid=existing_doc_id` - an alretnative to the method above in case the article's ID is in the form of an URI.
+* `DELETE /content?contentid=existing_doc_id` - an alternative to the method above in case the article's ID is in the form of an URI.
 
 Please, note that deleting an article does not impact the read statistics and user profiles.
 

@@ -10,7 +10,7 @@ permalink: v2_0_0-docs/popular-content-recommendations/
 
 ## Retrieving popular articles
 
-To receive popular content for recommendations, do the request:
+To receive recommendations with popular content do the request:
 
 `
 GET /recommend/popular
