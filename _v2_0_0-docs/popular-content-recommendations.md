@@ -2,7 +2,7 @@
 title: Popular Content Recommendations
 layout: default
 prev_section: advanced-recommendation-parameters
-next_section: uploading-content
+next_section: stop-recommending-content
 category: HowTo's
 permalink: v2_0_0-docs/popular-content-recommendations/
 ---
@@ -55,5 +55,5 @@ The number of reads for each article is kept in the `popularity` field.
 `/recommend/popular` has the following query parameters:
 
 - `count` (optional, default = 10) - maximum number of articles to return;
-- `sort` (optional, default = rel) - sorting method, valid arguments are "pop"(popularity), "rel"(relevancy) and "date";
-- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time, representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied.
+- `sort` (optional, default = rel) - sorting method, valid arguments are "pop" (popularity), "rel" (relevancy) and "date";
+- `recency` (optional, default = `<empty>`) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to go back and ISO-formatted date-time representing the point after which the events are processed. For example, `recency=5` will only return articles newer than five days ago. If omitted, no age filter is applied.
