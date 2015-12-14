@@ -1,20 +1,23 @@
 releases:
-  "v2_2_0":
+  "v2_0_0":
+    "Getting Started":
+      - "quick-start"
+      - "installation"
     "HowTo's":
       - "content-based-recommendations"
       - "behavioural-recommendations"
       - "advanced-recommendation-parameters"
       - "popular-content-recommendations"
-      - "uploading-articles"
       - "stop-recommending-content"
+      - "uploading-articles"
       - "user-actions"
   "v1_2_0":
     "Getting Started":
       - "quick-start"
       - "installation"
     "HowTo's":
-      - "content-based-recommendation"
-      - "get-behavioural-recommendations"
+      - "content-based-recommendations"
+      - "behavioural-recommendations"
       - "advanced-recommendation-parameters"
       - "stop-recommending-content"
       - "uploading-articles"
@@ -24,7 +27,3 @@ releases:
       - "troubleshooting"
       - "faq"
       - "known-issues"
-  "v1_1_1":
-    "Getting Started":
-      - "quick-start"
-      - "installation"

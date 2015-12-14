@@ -8,7 +8,7 @@ permalink: v2_0_0-docs/content-based-recommendations/
 
 <div class="info-badge">All example request URLs on this page are relative to the application root. For instance, if the web application is deployed at http://10.0.0.10:8080/api and the example says to request <code>/recommend/contextual</code>, the full URL would be http://10.0.0.10:8080/api/recommend/contextual.</div>
 
-## Retrieving articles based on content similatity
+## Retrieving articles based on content similarity
 
 To receive content-based recommendations for existing article, do the request:
 
@@ -49,17 +49,18 @@ and it will return the following (example) response:
 
 - `contentid` (required) - existing article identifier;
 - `count` (optional, default = 10) - maximum number of articles to return;
-- `sort` (optional, default = rel) - sorting method, valid arguments are "pop"(popularity), "rel"(relevancy) and "date";
+- `sort` (optional, default = rel) - sorting method, valid arguments are "pop" (popularity), "rel" (relevancy) and "date";
 - `explain` (default = false) - If set to true, the response contains additional debug information;
-- `onlyunread` (default = true) - If set to true, the recommendation contains only articles the user has never read. Otherwise read articles are also included in the response. 
-- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied;
-- `filter` (optional, default = <empty>) - a comma delimeted list of key-value pairs. Only articles which satisfy all of the constraints in the list are left for the further recommendation. For example:
-1. title:Some title - the recommendation consists only of articles with titles that contain the desired text.
-2. title:Some title,summary:Some summary - the recommendation contains only articles which have matching titles and summaries
+- `onlyunread` (default = true) - If set to true, the recommendation contains only articles the user has never read. Otherwise, the read articles are also included in the response. 
+- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time, representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied;
+- `filter` (optional, default = <empty>) - a comma delimited list of key-value pairs. Only articles that satisfy all constraints in the list are left for the further recommendation. For example:
+1. `"title":"Some title"` - only articles which titles contain the desired text are returned by the recommendation.
+2. `"title":"Some title"`, `"summary":"Some summary"` - only articles  which titles and summaries contain the desired texts are returned by the recommendation.
 
 ## Retrieving articles based on content similarity with advanced parameters
 
-There are some advanced parameters that could be passed for fine-tuning the results. For this aim you can use the POST method with the parameters that you want to set in the body section:
+To fine-tuned the results, use the `POST` method with some of the parameters described in the [Advanced recommendation parameters](/recommend-pub-docs/v2_0_0-docs/advanced-recommendation-parameters/) section. `Content-type` for `POST` requests should be *application/json* and the request body should contain a simple JSON object with parameter name and value pairs. For example:
+
 
 <pre><code>
 POST /recommend/contextual?contentid=existing_id
@@ -70,11 +71,9 @@ Content-type: application/json
 }
 </code></pre>
 
-Advanced parameters are described in more detail in the [Advanced recommendation parameter](/recommend-pub-docs/v2_0_0-docs/advanced-recommendation-parameters/) section
-
 ## Retrieving articles based on content similarity to a non-indexed article
 
-This can be achieved using the following request with a JSON object:
+Use a `POST` method with the following JSON object in the request body.
 
 <pre><code>
 POST /recommend/contextual/doc
@@ -89,7 +88,7 @@ Content-type: application/json
 }
 </code></pre>
 
-Optionally you can include values for the advanced parameters:
+Optionally, you can include values for the advanced parameters:
 
 <pre><code>
 POST /recommend/contextual/doc

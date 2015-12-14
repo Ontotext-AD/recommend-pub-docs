@@ -1,10 +1,10 @@
 ---
-title: Get Behavioural Recommendations
+title: Behavioural Recommendations
 layout: default
 prev_section: content-based-recommendation
 next_section: advanced-recommendation-parameters
 category: HowTo's
-permalink: v1_2_0-docs/get-behavioural-recommendations/
+permalink: v1_2_0-docs/behavioural-recommendations/
 ---
 <div class="info-badge">All request URLs in the document are relative to the application root. E.g. If the web application is deployed at http://10.0.0.10:8080/api and this document says to request <code>/recommend/behavioural</code>, the full URL would be http://10.0.0.10:8080/api/recommend/behavioural.</div>
 
@@ -76,7 +76,7 @@ The popularity weight may be lowered by POST-ing the request and adding JSON-enc
 `{ "beh.weight.popularity": 0.2 }`
 
 
-`Content-type` of the request will be `application/json`. See Advanced recommendation parameters for more information.
+`Content-type` of the request will be `application/json`. See  [Advanced recommendation parameters](/recommend-pub-docs/v2_0_0-docs/advanced-recommendation-parameters/) for more information.
 
 This changes the weight of popularity to 0.2 (down from the default 0.9) and the result is:
 
@@ -122,16 +122,16 @@ This changes the weight of popularity to 0.2 (down from the default 0.9) and the
 }
 </code></pre>
 
-Note how the relevance scores change when popularity is not that important for it.
+Note how the relevance score changes when popularity is not that important to it.
 
 You can also combine a user profile with the content he/she is currently looking at.
 
-Some possible scenarios could be:
+Some possible scenarios can be:
 
 - The user is reading a news article and you want to recommend more articles.
-- The user may be reviewing a CV and you want to recommend suitable job descriptions.
+- The user may be reviewing a CV and you want to recommend a suitable job descriptions.
 
-The way to add this contextual information is via the *contentid* parameter:
+The way to add this contextual information is via the `contentid` parameter:
 
 <code>
 GET /recommend/behavioural/?key=api_key&amp;userid=test-user-1&amp;count=4&amp;sort=rel&amp;contentid=doc-garden-1
@@ -174,5 +174,5 @@ Now, as both the user profile and the related content is about gardening, we get
 - `userid` (required) - the ID of the user to whom to return the recommendations;
 - `contentid` (optional) - the existing article identifier. If passed, the recommendations will be computed with respect to this article and the user history;
 - `count` (optional, default = 10) - the maximum number of articles to return;
-- `sort` (optional, default = rel) - the sorting method: valid arguments are "pop"(popularity), "rel"(relevancy), and "date";
-- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are "amonthago", "aweekago", and integers representing the maximum number of days ago. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied.
+- `sort` (optional, default = rel) - the sorting method: valid arguments are "pop" (popularity), "rel" (relevancy), and "date";
+- `recency` (optional, default = `<empty>`) - limits the age of the articles returned by the recommendation. The supported values for recency are "amonthago", "aweekago", and integers representing the maximum number of days ago. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied.

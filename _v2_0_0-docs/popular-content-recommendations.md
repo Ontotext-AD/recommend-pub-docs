@@ -56,4 +56,4 @@ The number of reads for each article is kept in the `popularity` field.
 
 - `count` (optional, default = 10) - maximum number of articles to return;
 - `sort` (optional, default = rel) - sorting method, valid arguments are "pop"(popularity), "rel"(relevancy) and "date";
-- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied.
+- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time, representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied.

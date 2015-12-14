@@ -12,7 +12,5 @@ collections:
     output: :true
   v1_2_0-docs:
     output: true
-  v1_1_1-docs:
-    output: true
-  v1_1_0-docs:
-    output: true
+
+
