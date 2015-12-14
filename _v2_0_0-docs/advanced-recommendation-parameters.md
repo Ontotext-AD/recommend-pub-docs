@@ -14,7 +14,7 @@ Parameters can be set per individual request or globally, for all requests.
 
 ## Passing parameters for recommendation request
 
-Both `/recommend/contextual` and `/recommend/behavioural` calls can be called with `GET` and `POST` HTTP methods. When `POST`-ing, some advanced parameters could be passed for fine-tuning the results. `Content-type` for `POST` requests should be `application/json` and the request body should contain a simple JSON object with parameter name and value pairs. For example:
+Both `/recommend/contextual` and `/recommend/behavioural` calls can be called with `GET` and `POST` HTTP methods. When `POST`-ing, some advanced parameters could be passed for fine-tuning the results. `Content-type` for `POST` requests should be `application/json` and the request body should contain a simple JSON object with the parameter name and value pairs. For example:
 
 <pre><code>
 POST /recommend/contextual?contentid=&lt;existing_id&gt;
