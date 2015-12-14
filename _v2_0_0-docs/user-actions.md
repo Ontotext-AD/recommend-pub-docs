@@ -32,12 +32,17 @@ When the relation is established, a similar result is returned:
 Query parameters:
 
 * `contentid` (required) - the article that the user is reading;
-* `weight` (optional) - a value representing the amount of impact that this read has on the user profile. This value is currently being ignored but it could be used with a custom recommendation algorithm.
+* `weight` (optional) - a value representing the amount of impact that this read has on the user profile. 
+
+    <div class="info-badge">
+    This value is currently being ignored but it can be used with a custom recommendation algorithm.
+    </div>
+
 * `timestamp` (optional) - the time when the action occurred. If not specified, the action occurs "now".
 
 ## Deleting the history of a user
 
-You can delete the whole history of the user with the following call:
+You can delete the whole history of a user with the following call:
 
 ```
 DELETE /users/<userid>/history
@@ -86,7 +91,7 @@ An example result is shown below  (`GET /users/user_1/history`):
 }
 </code></pre>
 
-Four of the seven reads of the returned articles are from the user with id `user_1`
+Four of the seven reads of the returned articles are from a user with an ID `user_1`.
 
 Query parameters:
 
@@ -94,7 +99,7 @@ Query parameters:
 
 - `limit` (optional, default = 10) - number of articles to retrieve;
 - `offset` (optional, default = 0) - the offset of the first result in the history that you want to fetch;
-- `recency` (optional, default = <empty>) - limits the list of the articles returned depending on the time they were read by the user. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied.
+- `recency` (optional, default = `<empty>`) - limits the list of the returned articles depending on the time they were read by the user. The supported values for recency are integers representing the maximum number of days to go back and ISO-formatted date-time representing the point after which the events are processed. For example, `recency=5` will only return articles newer than five days ago. If omitted, no age filter is applied.
 
 
 ## Obtaining the count of user reads

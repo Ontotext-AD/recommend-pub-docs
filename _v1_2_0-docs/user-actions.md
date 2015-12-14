@@ -78,9 +78,9 @@ The result is as follows:
 }
 </code></pre>
 
-The user with ID *user-1* has read the article with ID *doc-en-1* three times and the article with ID *doc-en-2* once.
+The user with ID `user-1` has read the article with ID `doc-en-1` three times and the article with ID `doc-en-2` once.
 
-The result is `numberOfReads`=4 for the user as well as `popularity`=3 and `popularity`=1 for the two articles. Popularity is global as it does not depend on the given user.
+The result is `numberOfReads`=4 for the user, as well as `popularity`=3 and `popularity`=1 for the two articles. Popularity is global as it does not depend on the given user.
 
 ### Obtaining a count of user reads
 
@@ -96,15 +96,19 @@ GET /usagestats/userreads/?key=&lt;api_key&gt;&amp;from=10
 The `to` parameter is optional and defaults to present time.
 Both `from` and `to` can take the following values:
 
-* amonthago;
-* aweekago;
+* `amonthago`;
+* `aweekago`;
 * integers representing number of days.
 
-A single number is returned as a result. Note that if a user has read the same article twice, it would be considered as two reads.
+A single number is returned as a result. 
+
+<div class="info-badge">
+If a user has read the same article twice, it would be considered as two reads.
+</div>
 
 Let's say you want to build a chart showing your news site activity on a daily basis for the last 10 days.
 
-You could use this method to get reads for each day and plot them in а chart:
+You can use this method to get reads for each day and plot them in а chart:
 
 <pre><code>
 GET /usagestats/userreads/?key=&lt;api_key&gt;&amp;from=30&amp;to=29
