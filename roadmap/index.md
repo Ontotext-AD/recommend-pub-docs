@@ -8,7 +8,7 @@ In an effort to be transparent with our roadmap, we are publishing in advance th
 
 ## Upcoming changes
 
-### Early 2015
+### Early 2016
 
 #### Relevance based on the behaviour of “People Like Me”
 
