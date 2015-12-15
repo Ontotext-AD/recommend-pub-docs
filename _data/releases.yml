@@ -11,6 +11,9 @@ releases:
       - "stop-recommending-content"
       - "uploading-articles"
       - "user-actions"
+    "Miscellaneous":
+      - "faq"
+      - "known-issues"
   "v1_2_0":
     "Getting Started":
       - "quick-start"
@@ -24,6 +27,5 @@ releases:
       - "user-actions"
       - "upgrade-to-a-newer-version"
     "Miscellaneous":
-      - "troubleshooting"
       - "faq"
       - "known-issues"
