@@ -14,21 +14,14 @@ Once annotated, the articles for the recommendation service can be uploaded to t
 The recommendation article schema consists of fields and each field has a name and value. The  fields used are as follows:
 
 * `id` (required) - the article ID, could be an arbitrary string;
-
 * `title` (optional) - the article title;
-
 * `summary` (optional) - a short summary of the article;
-
-* `content` (optional) - the article text content;
-
+* `content` (optional) - the article content;
 * `published` (optional) - the article publication date and time. The allowed formats are described [here](http://lucene.apache.org/solr/4_10_1/solr-core/org/apache/solr/schema/DateField.html).
-
 * `url` (optional) - the source URL of the article, if applicable;
-
 * `tags` (optional) - a space-separated list of tags for the article. Anything can be a tag but usually these are instance IDs of mentioned entities. For example, an article mentioning twice New York and once London  will have `http://dbpedia.org/resource/New_York_City`,
 `http://dbpedia.org/resource/London` and `http://dbpedia.org/resource/New_York_City`
  in its `tags` field. This field is used only for named entities.
-
 * `keyphrases` (optional) - a space-separated list of keyphrases. The format is the same as `tags` - anything can be a keyphrase but generally these are generated URIs such as `http://data.ontotext.com/publishing/topic/Metal` or `http://data.ontotext.com/publishing/topic/Oil_refiner`. This field is used only for general words and phrases that are key for the article.
 
 
@@ -96,7 +89,7 @@ Content-type: application/json
 ]
 </code></pre>
 
-* `GET /content/<id>` retrieves the article with the specified ID in the format above (`GET /content/test-document-1`). For example, `GET /content/test-document-1`  yields:
+* `GET /content/<id>` retrieves the article with the specified ID in the format above (`GET /content/test-document-1`). For example, `GET /content/test-document-1` yields:
 
 <pre><code>
 {
