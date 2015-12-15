@@ -10,7 +10,7 @@ permalink: v2_0_0-docs/content-based-recommendations/
 
 ## Retrieving articles based on content similarity
 
-To receive content-based recommendations for existing article, do the request:
+To receive content-based recommendations for an existing article, do the request:
 
 `
 GET /recommend/contextual?contentid=existing_id
@@ -52,8 +52,8 @@ and it will return the following (example) response:
 - `sort` (optional, default = rel) - sorting method, valid arguments are "pop" (popularity), "rel" (relevancy) and "date";
 - `explain` (default = false) - If set to true, the response contains additional debug information;
 - `onlyunread` (default = true) - If set to true, the recommendation contains only articles the user has never read. Otherwise, the read articles are also included in the response. 
-- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time, representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied;
-- `filter` (optional, default = <empty>) - a comma delimited list of key-value pairs. Only articles that satisfy all constraints in the list are left for the further recommendation. For example:
+- `recency` (optional, default = `<empty>`) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to go back and ISO-formatted date-time representing the point after which the events are processed. For example, `recency=5` will only return articles newer than five days ago. If omitted, no age filter is applied;
+- `filter` (optional, default = `<empty>`) - a comma delimited list of key-value pairs. Only articles that satisfy all constraints in the list are left for further recommendation. For example:
 1. `"title":"Some title"` - only articles which titles contain the desired text are returned by the recommendation.
 2. `"title":"Some title"`, `"summary":"Some summary"` - the recommendation contains only articles that have matching titles and summaries.
 
