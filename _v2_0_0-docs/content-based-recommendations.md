@@ -55,11 +55,11 @@ and it will return the following (example) response:
 - `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time, representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied;
 - `filter` (optional, default = <empty>) - a comma delimited list of key-value pairs. Only articles that satisfy all constraints in the list are left for the further recommendation. For example:
 1. `"title":"Some title"` - only articles which titles contain the desired text are returned by the recommendation.
-2. `"title":"Some title"`, `"summary":"Some summary"` - only articles  which titles and summaries contain the desired texts are returned by the recommendation.
+2. `"title":"Some title"`, `"summary":"Some summary"` - the recommendation contains only articles that have matching titles and summaries.
 
 ## Retrieving articles based on content similarity with advanced parameters
 
-To fine-tuned the results, use the `POST` method with some of the parameters described in the [Advanced recommendation parameters](/recommend-pub-docs/v2_0_0-docs/advanced-recommendation-parameters/) section. `Content-type` for `POST` requests should be *application/json* and the request body should contain a simple JSON object with parameter name and value pairs. For example:
+To fine-tuned the results, use the `POST` method with some of the parameters described in the [Advanced recommendation parameters](/recommend-pub-docs/v2_0_0-docs/advanced-recommendation-parameters/) section. `Content-type` for `POST` requests should be `application/json` and the request body should contain a simple JSON object with parameter name and value pairs. For example:
 
 
 <pre><code>

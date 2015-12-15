@@ -13,17 +13,17 @@ Behavioural recommendations are based on the user profile. They combine the data
 Here is a simple example.
 We have two categories of articles:
 
-- Articles with IDs *doc-garden-1*, *doc-garden-2*, etc. are related to gardens, garden tools, flowers, etc.
-- Articles with IDs *doc-travel-1*, *doc-travel-2* etc. are related to geographic places. They contain mainly names of places, transportation terms, etc.
+- Articles with IDs `doc-garden-1`, `doc-garden-2`, etc. are related to gardens, garden tools, flowers, etc.
+- Articles with IDs `doc-travel-1`, `doc-travel-2`, etc. are related to geographic places. They contain mainly names of places, transportation terms, etc.
 
 In this example, the articles of the second category are more visited - they have four times more reads on average than the articles on gardening.
 
-We have a user with ID *test-user-1*. This user has read only two articles: *doc-garden-1* and *doc-garden-3*.
+We have a user with an ID `test-user-1`. This user has read only two articles: `doc-garden-1` and `doc-garden-3`.
 
 You can get recommended content for this user by calling:
-`
+<code>
 GET /recommend/behavioural?userid=test-user-1&count=4&sort=rel
-`
+</code>
 
 This is the result:
 <pre><code>
@@ -76,7 +76,7 @@ The popularity weight may be lowered by `POST`-ing the request and adding JSON-e
 `{ "beh.weight.popularity": 0.2 }`
 
 
-`Content-type` of the request will be `application/json`. See Advanced recommendation parameters for more information.
+`Content-type` of the request will be `application/json`. See [Advanced recommendation parameters](/recommend-pub-docs/v2_0_0-docs/advanced-recommendation-parameters/) for more information.
 
 This changes the weight of popularity to 0.2 (down from the default 0.9) and the result is:
 
@@ -126,19 +126,19 @@ Note how the relevance score changes when popularity is not that important to it
 
 You can also combine a user profile with the content he/she is currently looking at.
 
-Some possible scenarios could be:
+Some possible scenarios can be:
 
 - The user is reading a news article and you want to recommend more articles.
 - The user may be reviewing a CV and you want to recommend suitable job descriptions.
 
-The way to add this contextual information is via the *contentid* parameter:
+The way to add this contextual information is via the `contentid` parameter:
 
 <code>
 GET /recommend/behavioural?userid=test-user-1&amp;count=4&amp;sort=rel&amp;contentid=doc-garden-1
 </code>
 
 
-Now, as both the user profile and the related content is about gardening, we get:
+Now, as both the user profile and the related content is about gardening, you get:
 
 <pre><code>
 {
@@ -177,7 +177,7 @@ Now, as both the user profile and the related content is about gardening, we get
 - `sort` (optional, default = rel) - the sorting method: valid arguments are "pop" (popularity), "rel" (relevancy), and "date";
 - `explain` (default = false) - If set to true, the response contains additional debug information;
 - `onlyunread` (default = true) - If set to true, the recommendation contains only articles the user has never read. Otherwise, read articles are also included in the response. 
-- `recency` (optional, default = <empty>) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to do back and ISO-formatted date-time, representing the point after which the events are processed. For example, recency=5 will only return articles newer than five days ago. If omitted, no age filter is applied;
-- `filter` (optional, default = <empty>) - a comma delimited list of key-value pairs. Only articles that satisfy all constraints in the list are left for the further recommendation. For example:
-1. title:Some title - the recommendation consists only of articles with titles that contain the desired text.
-2. title:Some title, summary:Some summary - the recommendation contains only articles that have matching titles and summaries.
+- `recency` (optional, default = `<empty>`) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to go back and ISO-formatted date-time, representing the point after which the events are processed. For example, `recency=5` will only return articles newer than five days ago. If omitted, no age filter is applied;
+- `filter` (optional, default = `<empty>`) - a comma delimited list of key-value pairs. Only articles that satisfy all constraints in the list are left for further recommendation. For example:
+1. `title:Some title` - the recommendation consists only of articles with titles that contain the desired text.
+2. `title:Some title`, `summary:Some summary` - the recommendation contains only articles that have matching titles and summaries.
