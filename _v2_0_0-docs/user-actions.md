@@ -2,6 +2,7 @@
 title: User Actions
 layout: default
 prev_section: stop-recommending-content
+next_section: es-backups-api
 category: HowTo's
 permalink: v2_0_0-docs/user-actions/
 ---
