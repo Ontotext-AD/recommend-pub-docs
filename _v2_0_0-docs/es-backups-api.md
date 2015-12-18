@@ -15,12 +15,12 @@ The backups API provides the opportunity to create backups of ES indices and res
 ### Creating a backup
 
 Each backup is described by its name, its current state and the time its creation started.
-To manually create a backup of the current state you can use one of the the following calls:
+To manually create a backup of the current state, use one of the the following calls:
 
 `POST /backups` or 
 `POST /backups?backupName=name` 
  
-With the first call the backup name depends on the current datetime (for example "2015-12-17t11:08:11.727z"). The second one expects a name containing lowercase letters. An example of a response is:
+With the first call the backup name depends on the current date-time (for example "2015-12-17t11:08:11.727z"). The second one expects a name containing lowercase letters. An example of a response is:
 
 <pre><code>
 {
@@ -35,11 +35,11 @@ With the first call the backup name depends on the current datetime (for example
 }
 </code></pre>
 
-It contains the name of the created backup, the current state and the time when it was started.
+It contains the name of the created backup, the current state, and the time when it was started.
 
 ### Retrieving a list of the backups
 
-To get s list of all existing backups you can use:
+To get s list of all existing backups, use:
 
 `
 GET /backups
@@ -68,7 +68,7 @@ You will receive a response similar to the following:
 
 ### Deleting a backup
 
-To delete a specific backup (for example a backup with name "backup_to_delete" you can use the following request:
+To delete a specific backup (for example a backup with name "backup_to_delete", use the following request:
 
 `
 DELETE /backups/backup_to_delete
@@ -147,7 +147,7 @@ To reset the default scheduler configurations, make the request:
 POST /backups/scheduler/default
 `
 
-It deletes all the changes done to the configurations and restores their default values, as shown in the previous section.
+It deletes all the changes done to the configurations and restores their default values.
 
 ## Changing the scheduler configuration
 
@@ -218,7 +218,7 @@ An example of a response is:
 }
 </code></pre>
 
-* The `cronExpression` should contain 6 fields respectively for seconds, minutes, hours, days, months and weekdays ([Spring cron expression format](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/support/CronSequenceGenerator.html))
+* The `cronExpression` should contain 6 fields respectively for seconds, minutes, hours, days, months and weekdays ([Spring cron expression format](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/support/CronSequenceGenerator.html)).
 * The `enabled` parameter can be set to `true` or `false`.
 * The `indices` parameter should be set to a list containing the names of the indices that you want to backup. If the list contains an invalid index name the following response is produced:
 
