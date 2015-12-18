@@ -11,6 +11,7 @@ releases:
       - "stop-recommending-content"
       - "uploading-articles"
       - "user-actions"
+      - "es-backups-api"
     "Miscellaneous":
       - "faq"
       - "known-issues"
