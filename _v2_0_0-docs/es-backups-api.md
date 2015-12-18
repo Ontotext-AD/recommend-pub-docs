@@ -44,6 +44,7 @@ To get s list of all existing backups, use:
 `
 GET /backups
 ` 
+
 You will receive a response similar to the following:
 
 <pre><code>
@@ -190,6 +191,7 @@ Get the current scheduler configuration with the following call:
 `
 GET /backups/scheduler
 `
+
 An example of a response is:
 
 <pre><code>
