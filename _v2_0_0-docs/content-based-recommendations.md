@@ -47,9 +47,9 @@ and it will return the following (example) response:
 
 `/recommend/contextual` has the following query parameters:
 
-- `contentid` (required) - existing article identifier;
-- `count` (optional, default = 10) - maximum number of articles to return;
-- `sort` (optional, default = rel) - sorting method, valid arguments are "pop" (popularity), "rel" (relevancy) and "date";
+- `contentid` (required) - the existing article identifier;
+- `count` (optional, default = 10) - the maximum number of articles to return;
+- `sort` (optional, default = rel) - the sorting method, valid arguments are "pop" (popularity), "rel" (relevancy) and "date";
 - `explain` (default = false) - If set to true, the response contains additional debug information;
 - `onlyunread` (default = true) - If set to true, the recommendation contains only articles the user has never read. Otherwise, the read articles are also included in the response.
 - `recency` (optional, default = `<empty>`) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to go back and ISO-formatted date-time representing the point after which the events are processed. For example, `recency=5` will only return articles newer than five days ago. If omitted, no age filter is applied;
