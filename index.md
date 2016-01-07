@@ -7,7 +7,7 @@ This site aims to be a comprehensive guide to the Ontotext Recommendation engine
 
 ## Who is this site for?
 
-This is a technical documentation, written to be used by technical people. Whether you are an architect, evaluating how this recommendation engine fits as a component to your system, or you are a developer, who has already integrated it and actively employs its features - this is the complete reference. We also try to provide as much as possible insight into what we are currently working on and our future ideas via the roadmap page, and will keep you posted with news about releases and upgrade paths.
+This is a technical documentation, written to be used by technical people. Whether you are an architect, evaluating how this recommendation engine fits as a component to your system, or you are a developer, who has already integrated it and actively employs its features - this is the complete reference. We also try to provide insight into what we are currently working on and our future ideas via the roadmap page, and will keep you posted with news about releases and upgrade paths.
 
 ## What is the Recommendation engine?
 
@@ -16,8 +16,8 @@ The Recommendation engine is a system that takes content and user actions as inp
 In other words, the recommendation is a combination of three main objectives/components:
 
 1. Relevance
-  * the relevance of a news item to the user's previous interests (their history)
-  * the relevance of a news item to the user's momentary context (the news article they are currently reading)
+  * the relevance of a news item to the user's previous interests (their history);
+  * the relevance of a news item to the user's momentary context (the news article they are currently reading).
 2. Freshness - the recency of the proposed articles
 3. Popularity - how popular the articles are. Popularity may be two-fold: popularity among peer users (thus becoming part of a collaborative filtering scheme) and popularity with respect to other articles (similar to the PageRank scheme, which reflects the popularity of a web site amongst other web sites).
 
@@ -35,7 +35,7 @@ The recommendation comprises the top n results of a merge of several lists of ne
 - We also plan to develop built-in extension and tuning points. This will increase its capabilities to add more user actions, specific to the business case, and to weigh them appropriately.
 
 - Although the recomemndations components integrate well with other Ontotext products, such as the Concept Extraction Service and GraphDB, it is not bound to RDF in any way. It can be integrated with other existing systems,
- which use whatever database to store their tags. The tags and keyphrases can contain anything which can be represented as string - numbers, hashes, URIs or words - and similarity is calculated on top of that.
+ which use whatever database to store their tags. The tags and keyphrases can contain anything that can be represented as a string - numbers, hashes, URIs or words - and similarity is calculated on top of that.
 
 ## Helpful hints
 
