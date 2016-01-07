@@ -113,7 +113,7 @@ Content-type: application/json
 }
 </code></pre>
 
-* `GET /content?contentid=content_id` - an alternative to the method above in case the articles have IDs in the form of URIs.
+* `GET /content?contentid=content_id` - an alternative to the method above, in case the articles have IDs in the form of URIs.
 
 <div class="note-badge">
   <ul>
@@ -121,4 +121,3 @@ Content-type: application/json
     <li> It is recommended (though not required) to set the <code>Accept: application/json</code> header for all requests.</li>
   </ul>
 </div>
-
