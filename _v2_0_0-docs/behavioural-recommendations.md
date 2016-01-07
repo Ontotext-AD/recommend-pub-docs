@@ -6,9 +6,9 @@ next_section: advanced-recommendation-parameters
 category: HowTo's
 permalink: v2_0_0-docs/behavioural-recommendations/
 ---
-<div class="info-badge">All request URLs in the document are relative to the application root. E.g. If the web application is deployed at http://10.0.0.10:8080/api and this document says to request <code>/recommend/behavioural</code>, the full URL would be http://10.0.0.10:8080/api/recommend/behavioural.</div>
+<div class="info-badge">All request URLs in the document are relative to the application root. E.g., if the web application is deployed at http://10.0.0.10:8080/api and this document says to request <code>/recommend/behavioural</code>, the full URL would be http://10.0.0.10:8080/api/recommend/behavioural.</div>
 
-Behavioural recommendations are based on the user profile. They combine the data about users' interests with a set of configuration parameters that define weight for each factor.
+Behavioural recommendations are based on the user profile. They combine the data about the users' interests with a set of configuration parameters that define weight for each factor.
 
 Here is a simple example.
 We have two categories of articles:
@@ -176,7 +176,7 @@ Now, as both the user profile and the related content is about gardening, you ge
 - `count` (optional, default = 10) - the maximum number of articles to return;
 - `sort` (optional, default = rel) - the sorting method: valid arguments are "pop" (popularity), "rel" (relevancy), and "date";
 - `explain` (default = false) - If set to true, the response contains additional debug information;
-- `onlyunread` (default = true) - If set to true, the recommendation contains only articles the user has never read. Otherwise, read articles are also included in the response. 
+- `onlyunread` (default = true) - If set to true, the recommendation contains only articles the user has never read. Otherwise, read articles are also included in the response.
 - `recency` (optional, default = `<empty>`) - limits the age of the articles returned by the recommendation. The supported values for recency are integers representing the maximum number of days to go back and ISO-formatted date-time, representing the point after which the events are processed. For example, `recency=5` will only return articles newer than five days ago. If omitted, no age filter is applied;
 - `filter` (optional, default = `<empty>`) - a comma delimited list of key-value pairs. Only articles that satisfy all constraints in the list are left for further recommendation. For example:
 1. `title:Some title` - the recommendation consists only of articles with titles that contain the desired text.
