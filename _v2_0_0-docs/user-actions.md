@@ -11,7 +11,7 @@ permalink: v2_0_0-docs/user-actions/
 
 ## Storing user actions
 
-User actions are usually tracked by an external publication system. Currently we support one kind of action, which may be considered equivalent to "User has read" or "User is interested in". Depending on the content specifics and the audience, different systems may opt for different schema of registering user actions. For example, a user may be considered interested in an article if they commented on it or scrolled to the second screen, or a combination of both.
+User actions are usually tracked by an external publication system. Currently, we support one kind of action, which may be considered equivalent to "User has read" or "User is interested in". Depending on the content specifics and the audience, different systems may opt for different schema of registering user actions. For example, a user may be considered interested in an article if they commented on it or scrolled to the second screen, or a combination of both.
 
 The relation is established by the following call:
 
@@ -33,7 +33,7 @@ When the relation is established, a similar result is returned:
 Query parameters:
 
 * `contentid` (required) - the article that the user is reading;
-* `weight` (optional) - a value representing the amount of impact that this read has on the user profile. 
+* `weight` (optional) - a value representing the amount of impact that this read has on the user profile.
 
     <div class="info-badge">
     This value is currently being ignored but it can be used with a custom recommendation algorithm.
@@ -98,7 +98,7 @@ Query parameters:
 
 `/users/<userid>/history` has the following query parameters:
 
-- `limit` (optional, default = 10) - number of articles to retrieve;
+- `limit` (optional, default = 10) - the number of articles to retrieve;
 - `offset` (optional, default = 0) - the offset of the first result in the history that you want to fetch;
 - `recency` (optional, default = `<empty>`) - limits the list of the returned articles depending on the time they were read by the user. The supported values for recency are integers representing the maximum number of days to go back and ISO-formatted date-time representing the point after which the events are processed. For example, `recency=5` will only return articles newer than five days ago. If omitted, no age filter is applied.
 
@@ -124,4 +124,3 @@ The received result looks as follows:
   }
 }
 </code></pre>
-
