@@ -7,7 +7,7 @@ category: Getting Started
 permalink: v2_0_0-docs/quick-start/
 ---
 
-## 0. What are the minimum system requirements?
+## 0. Minimum system requirements
 
 JDK requirements:
 
@@ -17,7 +17,7 @@ JDK requirements:
 Preferred OS:
 
 * Ubuntu - all our test and production servers are on Ubuntu.
-* Our developer machines run Ubuntu/RedHat/Mac OS X, so these should be ok too.
+* Our developer machines run Ubuntu/RedHat/Mac OS X.
 
 ## 1. Get access to the system components
 
@@ -35,7 +35,6 @@ See the <a href="{{ site.baseurl }}/v2_0_0-docs/uploading-articles">Uploading Ar
 
 Now you have content in the system and can get basic contextual recommendations. For details, see the <a href="{{ site.baseurl }}/v2_0_0-docs/content-based-recommendation">Content-based recommendation<a/> page.
 
-## 5. Take a break
+## 5. Next steps
 
-Now you have setup the recommendations components successfully, you deserve a break. Behavioural recommendations and tuning the algorithm weights are the next things you
- are probably most interested in. You can find how in the HowTo section.
+Now that you have setup the recommendations components successfully, behavioural recommendations and algorithm weights tuning are probably the next things you are most interested in. You can find how to do it in the HowTo section.
