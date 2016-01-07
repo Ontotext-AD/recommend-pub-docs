@@ -8,7 +8,7 @@ permalink: v2_0_0-docs/advanced-recommendation-parameters/
 ---
 The recommendation engine has a lot of internal parameters for fine-tuning the underlying algorithm. For example, when determining the relevance of any given article, its popularity and freshness can alter its score (popular and recent articles score higher). When computing an article score, the weight of popularity and freshness can be controlled by setting the respective parameters (`beh.weight.popularity` and `beh.weight.freshness`).
 
-There are many more parameters to adjust. See the reference at the end of this document.
+There are many more parameters to adjust (see the reference at the end of this document).
 
 Parameters can be set per individual request or globally, for all requests.
 
@@ -58,7 +58,7 @@ GET /weights
 
 ## Parameter reference
 
-  All recognized parameters - values below are the defaults:
+  All recognised parameters and their values below are the defaults:
 
 <pre><code>
 [
