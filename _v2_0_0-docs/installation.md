@@ -17,7 +17,8 @@ permalink: v2_0_0-docs/installation/
 
 This guide is the bare minimum that needs to be done in order to setup a working system. Scalability and high availability are addressed separately.
 
-1. Install Elasticsearch. Create a `recommendation-reads` index using the following command containing the mappings and settings:
+1. [Install Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/_installation.html).
+2. Create a `recommendation-reads` index using the following command containing the mappings and settings:
 
 <pre><code>
 curl -f -XPUT http://elastic-host:elastic-port/recommendations-reads -d '{
@@ -225,10 +226,10 @@ curl -f -XPUT http://elastic-host:elastic-port/recommendations-docs -d '{
 
 where `elastic-host` and `elastic-port` are the host and port where Elastic node is reachable from (by default it should be http://localhost:9200). Also you should replace `/path/to/stopwords/file` with the correct path to the file containing the stopwords.
 
-2. Deploy [recommendations-web.war](http://maven.ontotext.com/content/repositories/publishing-releases/com/ontotext/recommend/recommendations-web/2.0.0/recommendations-web-2.0.0.war) to an application container of your choice. We usually use [Apache Tomcat](http://tomcat.apache.org/tomcat-7.0-doc/appdev/installation.html). Some Java system properties need to be set on the container (in the case of Tomcat, they should go in `bin/setenv.sh` or `bin/setenv.bat`, depending on your platform):
+3. Deploy [recommendations-web.war](http://maven.ontotext.com/content/repositories/publishing-releases/com/ontotext/recommend/recommendations-web/2.0.0/recommendations-web-2.0.0.war) to an application container of your choice. We usually use [Apache Tomcat](http://tomcat.apache.org/tomcat-7.0-doc/appdev/installation.html). Some Java system properties need to be set on the container (in the case of Tomcat, they should go in `bin/setenv.sh` or `bin/setenv.bat`, depending on your platform):
 
-	2.1. `-Dcom.ontotext.recommend.backend.url=transport://<host1>:<port1>,<host2>:<port2>/<index-name>` - a URL to the backend. The host and port point to an Elastic cluster
+	3.1. `-Dcom.ontotext.recommend.backend.url=transport://<host1>:<port1>,<host2>:<port2>/<index-name>` - a URL to the backend. The host and port point to an Elastic cluster
 
-	2.2. `-Dcom.ontotext.recommend.store.url=transport://\<host1\>:\<port1\>,\<host2\>:\<port2\>/\<index-name\>` - a URL to the content store. The host and port should point to an Elastic cluster
+	3.2. `-Dcom.ontotext.recommend.store.url=transport://\<host1\>:\<port1\>,\<host2\>:\<port2\>/\<index-name\>` - a URL to the content store. The host and port should point to an Elastic cluster
 
-	2.3 `-Dcom.ontotext.recommend.requestDocAddress` - the base URL to use for requesting articles that do not exist. It should point to the _/enqueue_ endpoint in a _fetch-annotate-web_ deployment
+	3.3 `-Dcom.ontotext.recommend.requestDocAddress` - the base URL to use for requesting articles that do not exist. It should point to the _/enqueue_ endpoint in a _fetch-annotate-web_ deployment
