@@ -231,5 +231,3 @@ where `elastic-host` and `elastic-port` are the host and port where Elastic node
 	3.1. `-Dcom.ontotext.recommend.backend.url=transport://<host1>:<port1>,<host2>:<port2>/<index-name>` - a URL to the backend. The host and port point to an Elastic cluster
 
 	3.2. `-Dcom.ontotext.recommend.store.url=transport://\<host1\>:\<port1\>,\<host2\>:\<port2\>/\<index-name\>` - a URL to the content store. The host and port should point to an Elastic cluster
-
-	3.3 `-Dcom.ontotext.recommend.requestDocAddress` - the base URL to use for requesting articles that do not exist. It should point to the _/enqueue_ endpoint in a _fetch-annotate-web_ deployment
