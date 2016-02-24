@@ -18,7 +18,7 @@ permalink: v2_0_0-docs/installation/
 This guide is the bare minimum that needs to be done in order to setup a working system. Scalability and high availability are addressed separately.
 
 1. [Install Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/_installation.html).
-2. Create an index (for example with name `recommendation-reads`) to store the user reads, profiles an transitions between articles. Use the following command containing the mappings and settings:
+2. Create an index (for example with name `recommendation-reads`) to store the user reads, profiles and transitions between articles. Use the following command containing the mappings and settings:
 
 <pre><code>
 curl -f -XPUT http://elastic-host:elastic-port/recommendations-reads -d '{
