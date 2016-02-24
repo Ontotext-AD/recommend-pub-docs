@@ -159,10 +159,34 @@ GET /weights
     "description": "fields to use for content similarity"
   },
   {
-    "name": "mlt.boostexpr",
+    "name": "mlt.timedecay.function",
     "type": "STRING",
-    "value": "recip(ms(NOW,published),3.858024691358025e-10,1,1)",
-    "description": "boosting expression for content recommendation"
+    "value": "gauss",
+    "description": "function to use. One of ('gauss','lin', 'exp'). Defaults to 'gauss' if something else is provided. More details: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-decay ."
+  },
+  {
+    "name": "mlt.timedecay.offset",
+    "type": "STRING",
+    "value": "5d",
+    "description": "the decay function will be applied only for documents with a distance greater that the defined offset. "
+  },
+  {
+    "name": "mlt.timedecay.origin",
+    "type": "STRING",
+    "value": "now",
+    "description": "the point of origin used for calculating distance. "
+  },
+  {
+    "name": "mlt.timedecay.decay",
+    "type": "DOUBLE",
+    "value": 0.5,
+    "description": "defines how documents are scored at the distance given at scale. "
+  },
+  {
+    "name": "mlt.timedecay.scale",
+    "type": "STRING",
+    "value": "30d",
+    "description": "defines the distance from origin at which the computed score will equal decay parameter. "
   },
   {
     "name": "beh.articleDampingFactor",
