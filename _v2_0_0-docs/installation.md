@@ -21,7 +21,7 @@ This guide is the bare minimum that needs to be done in order to setup a working
 2. Create an index (for example with name `recommendation-reads`) to store the user reads, profiles and transitions between articles. Use the following command containing the mappings and settings:
 
 <pre><code>
-curl -f -XPUT http://elastic-host:elastic-port/recommendations-reads -d '{
+curl -f -XPUT http://elastic-host:elastic-port/recommendation-reads -d '{
   "mappings": {
     "transitions": {
       "_all": {
@@ -107,7 +107,7 @@ curl -f -XPUT http://elastic-host:elastic-port/recommendations-reads -d '{
 and another index (for example with name `recommendation-docs`) which contains the documents:
 
 <pre><code>
-curl -f -XPUT http://elastic-host:elastic-port/recommendations-docs -d '{
+curl -f -XPUT http://elastic-host:elastic-port/recommendation-docs -d '{
   "mappings": {
     "content": {
       "_all": {
