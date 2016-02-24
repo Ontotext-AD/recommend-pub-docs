@@ -22,9 +22,6 @@ This guide is the bare minimum that needs to be done in order to setup a working
 
 <pre><code>
 curl -f -XPUT http://elastic-host:elastic-port/recommendations-reads -d '{
-  "aliases": {
-    "recommendations-reads": {}
-  },
   "mappings": {
     "transitions": {
       "_all": {
@@ -111,9 +108,6 @@ and `recommendation-docs` index with the following:
 
 <pre><code>
 curl -f -XPUT http://elastic-host:elastic-port/recommendations-docs -d '{
-  "aliases": {
-    "recommendations-docs": {}
-  },
   "mappings": {
     "content": {
       "_all": {
