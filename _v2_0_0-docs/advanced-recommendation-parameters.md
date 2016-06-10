@@ -63,6 +63,72 @@ GET /weights
 <pre><code>
 [
   {
+    "name": "mlt.timedecay.origin",
+    "type": "STRING",
+    "value": "now",
+    "description": "the point of origin used for calculating distance. "
+  },
+  {
+    "name": "mlt.timedecay.decay",
+    "type": "DOUBLE",
+    "value": 0.5,
+    "description": "defines how documents are scored at the distance given at scale. "
+  },
+  {
+    "name": "beh.weight.popularity",
+    "type": "DOUBLE",
+    "value": 1,
+    "description": "relative weight of an article's popularity"
+  },
+  {
+    "name": "mlt.timedecay.scale",
+    "type": "LONG",
+    "value": 3628800000,
+    "description": "defines the distance from origin at which the computed score will equal decay parameter. Defaults to 42 days in milliseconds"
+  },
+  {
+    "name": "mlt.qf",
+    "type": "STRING",
+    "value": "content^1.0 tags^2 title^0.25 keyphrases^2 summary^2",
+    "description": "query fields and their boosts using format \"field1^boost1 field2^boost2 ...\". These fields must also be specified in mlt.fl"
+  },
+  {
+    "name": "mlt.minwl",
+    "type": "INTEGER",
+    "value": 1,
+    "description": "minimum word length below which words will be ignored"
+  },
+  {
+    "name": "mlt.maxdf",
+    "type": "INTEGER",
+    "value": 2147483647,
+    "description": "maximum Document Frequency - the frequency at which words which occur in more documents than this will be ignored."
+  },
+  {
+    "name": "beh.weight.moreLikeThis",
+    "type": "DOUBLE",
+    "value": 1,
+    "description": "weight of the article content similarity portion when calculating behavioural recommendation"
+  },
+  {
+    "name": "beh.weight.freshness",
+    "type": "DOUBLE",
+    "value": 1,
+    "description": "relative weight of the freshness/recency of an article"
+  },
+  {
+    "name": "beh.gamma",
+    "type": "DOUBLE",
+    "value": 0.98,
+    "description": "parameter that controls the stickiness/momentum of update of a user profile's static term matrix"
+  },
+  {
+    "name": "beh.articleDampingFactor",
+    "type": "INTEGER",
+    "value": 10,
+    "description": "when a user haven't read many articles, the weight of his profile is lowered. This parameter sets the minimum number of articles a user must read before his profile gains full weight"
+  },
+  {
     "name": "mlt.interestingTerms",
     "type": "STRING",
     "value": "details",
@@ -81,28 +147,10 @@ GET /weights
     "description": "relative weight of article covisitation"
   },
   {
-    "name": "beh.weight.popularity",
-    "type": "DOUBLE",
-    "value": 1,
-    "description": "relative weight of an article's popularity"
-  },
-  {
     "name": "mlt.boost",
     "type": "BOOLEAN",
     "value": false,
     "description": "set if the query will be boosted by the interesting term relevance. "
-  },
-  {
-    "name": "mlt.qf",
-    "type": "STRING",
-    "value": "content^1.0 tags^2 title^0.25 keyphrases^2 summary^2",
-    "description": "query fields and their boosts using format \"field1^boost1 field2^boost2 ...\". These fields must also be specified in mlt.fl"
-  },
-  {
-    "name": "mlt.minwl",
-    "type": "INTEGER",
-    "value": 1,
-    "description": "minimum word length below which words will be ignored"
   },
   {
     "name": "beh.alpha",
@@ -111,22 +159,16 @@ GET /weights
     "description": "parameter that controls the stickiness/momentum of update of a user profile's transition matrix"
   },
   {
-    "name": "mlt.maxdf",
-    "type": "INTEGER",
-    "value": 2147483647,
-    "description": "maximum Document Frequency - the frequency at which words which occur in more documents than this will be ignored."
+    "name": "mlt.timedecay.function",
+    "type": "STRING",
+    "value": "exp-time-decay",
+    "description": "function to use. One of ('gauss','lin', 'exp', 'exp-time-decay'). Defaults to 'exp-time-decay' if something else is provided. More details: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-decay . 'exp-time-decay' is the same as 'exp' only instead of 'fieldvalue - origin' here we have the maximum between 'now - publishedDate' and '2 years'"
   },
   {
     "name": "mlt.mintf",
     "type": "INTEGER",
     "value": 1,
     "description": "minimum Term Frequency - the frequency below which terms will be ignored in the source doc"
-  },
-  {
-    "name": "beh.weight.moreLikeThis",
-    "type": "DOUBLE",
-    "value": 1,
-    "description": "weight of the article content similarity portion when calculating behavioural recommendation"
   },
   {
     "name": "mlt.mintf.perfield",
@@ -141,58 +183,16 @@ GET /weights
     "description": "maximum number of query terms that will be included in any generated query. "
   },
   {
-    "name": "beh.weight.freshness",
-    "type": "DOUBLE",
-    "value": 1,
-    "description": "relative weight of the freshness/recency of an article"
-  },
-  {
-    "name": "beh.gamma",
-    "type": "DOUBLE",
-    "value": 0.98,
-    "description": "parameter that controls the stickiness/momentum of update of a user profile's static term matrix"
+    "name": "mlt.timedecay.offset",
+    "type": "INTEGER",
+    "value": 432000000,
+    "description": "the decay function will be applied only for documents with a distance greater that the defined offset. Defaults to 5 days in milliseconds"
   },
   {
     "name": "mlt.fl",
     "type": "STRING",
     "value": "title,summary,content,tags,keyphrases",
     "description": "fields to use for content similarity"
-  },
-  {
-    "name": "mlt.timedecay.function",
-    "type": "STRING",
-    "value": "gauss",
-    "description": "function to use. One of ('gauss','lin', 'exp'). Defaults to 'gauss' if something else is provided. More details: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-decay ."
-  },
-  {
-    "name": "mlt.timedecay.offset",
-    "type": "STRING",
-    "value": "5d",
-    "description": "the decay function will be applied only for documents with a distance greater that the defined offset. "
-  },
-  {
-    "name": "mlt.timedecay.origin",
-    "type": "STRING",
-    "value": "now",
-    "description": "the point of origin used for calculating distance. "
-  },
-  {
-    "name": "mlt.timedecay.decay",
-    "type": "DOUBLE",
-    "value": 0.5,
-    "description": "defines how documents are scored at the distance given at scale. "
-  },
-  {
-    "name": "mlt.timedecay.scale",
-    "type": "STRING",
-    "value": "30d",
-    "description": "defines the distance from origin at which the computed score will equal decay parameter. "
-  },
-  {
-    "name": "beh.articleDampingFactor",
-    "type": "INTEGER",
-    "value": 10,
-    "description": "when a user haven't read many articles, the weight of his profile is lowered. This parameter sets the minimum number of articles a user must read before his profile gains full weight"
   },
   {
     "name": "beh.weight.userProfile",
